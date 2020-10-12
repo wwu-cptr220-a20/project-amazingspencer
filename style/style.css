@@ -1,3 +1,27 @@
+body {
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: #0d47a1;
+}
+
+button {
+    fill: white;
+}
+
+ul a {
+    color: white;
+}
+
+ul a:hover {
+    color: #5472d3;
+}
+
+h1 {
+    margin-top: 5rem;
+}
+
 /* So the images look reasonable */
 img {
     width: 300px;
