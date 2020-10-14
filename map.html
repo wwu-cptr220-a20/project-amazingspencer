@@ -10,6 +10,8 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
     <link rel="manifest" href="favicon/site.webmanifest">
     <title>COVID-19 - Map</title>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/08a93ca9f2.js" crossorigin="anonymous"></script>
     <!-- Stylesheets -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -18,26 +20,43 @@
 
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="cases.html">Cases</a></li>
-                <li><a href="map.html">Map</a></li>
-                <li><a href="index.html#care">Care</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
+        <nav class="navbar fixed-top navbar-expand-md">
+            <div id="skip">
+                <a href="#map">Skip to Content</a>
+            </div>
+            <span class="navbar-brand">COVID-19</span>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"><i class="fas fa-bars hamburger"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto nav">
+                    <li class="nav-item active"><a class="nav-link" href="index.html"><i
+                                class="fa fa-fw fa-home">&nbsp;Home</i></a></li>
+                    <li class="nav-item"><a class="nav-link" href="cases.html"><i
+                                class="fas fa-syringe">&nbsp;Cases</i></a></li>
+                    <li class="nav-item"><a class="nav-link" href="map.html"><i
+                                class="fas fa-map-marked-alt">&nbsp;Map</i></a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#care"><i
+                                class="fas fa-hand-holding-medical">&nbsp;Care</i></a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html"><i
+                                class="fas fa-ellipsis-h">&nbsp;About</i></a></li>
+                </ul>
+            </div>
         </nav>
         <h1>Map</h1>
     </header>
     <main>
-        <section id="map">
-            <p>
-                The purpose of the map graphic is to display where coronavirus cases are occuring around the world.
-            </p>
-            <p>
-                The map will be brought in either through a web API or some other means.
-            </p>
-        </section>
+        <div class="container">
+            <section id="map">
+                <p>
+                    The purpose of the map graphic is to display where coronavirus cases are occuring around the world.
+                </p>
+                <p>
+                    The map will be brought in either through a web API or some other means.
+                </p>
+            </section>
+        </div>
     </main>
     <footer>
         Contact <a href="mailto:amazingspencer13@gmail.com">Spencer</a>.

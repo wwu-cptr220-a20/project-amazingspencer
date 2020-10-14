@@ -14,8 +14,9 @@
     <link rel="manifest" href="favicon/site.webmanifest">
     <title>COVID-19 - Home</title>
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/08a93ca9f2.js" crossorigin="anonymous"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
     <!-- Stylesheets -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -35,18 +36,26 @@
 <body>
     <header>
         <nav class="navbar fixed-top navbar-expand-md">
+            <div id="skip">
+                <a href="#overview">Skip to Content</a>
+            </div>
+            <a class="navbar-brand" href="index.html">COVID-19</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"><i class="fas fa-bars hamburger"></i></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html"><i class="fa fa-fw fa-home"> Home</i></a>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="cases.html">Cases</a></li>
-                    <li class="nav-item"><a class="nav-link" href="map.html">Map</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#care">Care</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <ul class="navbar-nav mr-auto nav">
+                    <li class="nav-item active"><a class="nav-link" href="index.html"><i
+                                class="fa fa-fw fa-home">&nbsp;Home</i></a></li>
+                    <li class="nav-item"><a class="nav-link" href="cases.html"><i
+                                class="fas fa-syringe">&nbsp;Cases</i></a></li>
+                    <li class="nav-item"><a class="nav-link" href="map.html"><i
+                                class="fas fa-map-marked-alt">&nbsp;Map</i></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#care"><i
+                                class="fas fa-hand-holding-medical">&nbsp;Care</i></a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html"><i
+                                class="fas fa-ellipsis-h">&nbsp;About</i></a></li>
                 </ul>
             </div>
         </nav>
@@ -54,171 +63,248 @@
         <h2>The pandemic of our time.</h2>
     </header>
     <main>
-        <section id="overview">
-            <h2>Overview</h2>
+        <div class="container">
+            <section id="overview">
+                <h2>Overview</h2>
 
-            <p>
-                Around February 2020, rumors began to spread of a certain virus that could have devastading
-                consequences.
-                In March 2020, the coronavirus made its debut and had spread to the United States.
-                In an attempt to slow the spread, the country was shut down for months and preventative measures were
-                put
-                into place to slow the spread. Now after being shut down, the country is beginning to reopen and
-                businesses
-                are opening their doors with preventative measures still in place. These preventive measures include
-                wearing
-                face masks and social distancing. As Americans are getting back into the office and perhaps going to the
-                grocery store
-                for the first time in months, Americans need to know the extent of this virus and what the stats of the
-                coronavirus are.
-            </p>
+                <p>
+                    Around February 2020, rumors began to spread of a certain virus that could have
+                    devastading
+                    consequences.
+                    In March 2020, the coronavirus made its debut and had spread to the United States.
+                    In an attempt to slow the spread, the country was shut down for months and preventative
+                    measures
+                    were
+                    put
+                    into place to slow the spread. Now after being shut down, the country is beginning to
+                    reopen
+                    and
+                    businesses
+                    are opening their doors with preventative measures still in place. These preventive
+                    measures
+                    include
+                    wearing
+                    face masks and social distancing. As Americans are getting back into the office and
+                    perhaps
+                    going to
+                    the
+                    grocery store
+                    for the first time in months, Americans need to know the extent of this virus and what
+                    the
+                    stats
+                    of
+                    the
+                    coronavirus are.
+                </p>
 
-            <p>
-                Currently, the <cite><a
-                        href="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html">CDC
-                        recommends</a></cite>
-                that you wash your hands often, avoid close contact, cover your mouth and nose with a mask when around
-                others,
-                cover coughs and sneezes, clean and disinfect, and monitor your health daily to prevent contracting the
-                coronavirus.
-            </p>
+                <p>
+                    Currently, the <cite><a
+                            href="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html">CDC
+                            recommends</a></cite>
+                    that you wash your hands often, avoid close contact, cover your mouth and nose with a
+                    mask
+                    when
+                    around
+                    others,
+                    cover coughs and sneezes, clean and disinfect, and monitor your health daily to prevent
+                    contracting
+                    the
+                    coronavirus.
+                </p>
 
-            <p>
-                <cite><a href="https://coronavirus.jhu.edu/map.html">John Hopkins University</a></cite> provides a
-                global map of
-                coronavirus hotspots and known locations. This site also
-                includes number of cases, number of deaths, and trends for the virus.
-            </p>
+                <p>
+                    <cite><a href="https://coronavirus.jhu.edu/map.html">John Hopkins University</a></cite>
+                    provides
+                    a
+                    global map of
+                    coronavirus hotspots and known locations. This site also
+                    includes number of cases, number of deaths, and trends for the virus.
+                </p>
 
-            <p>
-                I believe that there is a real need for web applications for the coronavirus. People want to be able to
-                visit
-                a site that will inform and provide updated statistics on the extent of the coronavirus. People want to
-                be
-                able to quickly and easily locate information related to the coronavirus. People will also want to see
-                how
-                their local governments are handling this virus and the web app could provide links to local government
-                sites.
-            </p>
+                <p>
+                    I believe that there is a real need for web applications for the coronavirus. People
+                    want to
+                    be
+                    able
+                    to
+                    visit
+                    a site that will inform and provide updated statistics on the extent of the coronavirus.
+                    People
+                    want
+                    to
+                    be
+                    able to quickly and easily locate information related to the coronavirus. People will
+                    also
+                    want
+                    to
+                    see
+                    how
+                    their local governments are handling this virus and the web app could provide links to
+                    local
+                    government
+                    sites.
+                </p>
+            </section>
             <!-- Image -->
             <figure>
                 <img src="img/covid-19.jpg" alt="Spray-paint of a mask and the words COVID-19.">
-                <figcaption>Photo by <cite><a href="https://unsplash.com/@adamsky1973">Adam Nieścioruk</a></cite>.
+                <figcaption>Photo by <cite><a href="https://unsplash.com/@adamsky1973">Adam
+                            Nieścioruk</a></cite>.
                 </figcaption>
             </figure>
-
-        </section>
-        <section id="origin">
-            <h2>Origin</h2>
-            <p>
-                The coronavirus originated in Wuhan, China. According to <cite><a
-                        href="https://www.webmd.com/lung/coronavirus-history">WebMD</a></cite>, the coronavirus began in
-                what is called
-                a "wet-market," where fresh meat and fish is sold daily and some animals sold are killed on the spot.
-                "Some wet markets sell wild or banned species like cobras, wild boars, and raccoon dogs. Crowded
-                conditions can let viruses from different animals swap genes. Sometimes the virus changes so much it can
-                start to infect and spread among people. Still, the Wuhan market didn't sell bats at the time of the
-                outbreak. That’s why early suspicion also fell on pangolins, also called scaly anteaters, which are sold
-                illegally in some markets in China. Some coronaviruses that infect pangolins are similar to SARS-CoV-2
-                (a coronavirus).
-                As SARS-CoV-2 spread both inside and outside China, it infected people who have had no direct contact
-                with animals. That meant the virus is transmitted from one human to another. It’s now spreading in the
-                U.S. and around the globe, meaning that people are unwittingly catching and passing on the coronavirus."
-            </p>
-        </section>
-        <section id="symptoms">
-            <h2>Symptoms</h2>
-            <p>
-                The coronavirus causes symptoms of shortness of breath or difficulty breathing, fever or chills, cough,
-                fatigue, muscle or body aches, headache, new loss of taste or smell, sore throat, congestion or runny
-                nose,
-                nausea or vomiting, and diarrhea. Symptoms listed here are from the <cite><a
-                        href="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html">CDC</a></cite>.
-            </p>
-            <p>
-                Should you experience these symptoms, it is important to visit your doctor to get tested. The <cite><a
-                        href="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html">CDC</a></cite>
-                also
-                highlights certain symtpoms that if experienced should be treated as soon as possible:
-            </p>
-            <ul>
-                <li>Trouble breathing</li>
-                <li>Persistent pain or pressure in the chest</li>
-                <li>New confusion</li>
-                <li>Inability to wake or stay awake</li>
-                <li>Bluish lips or face</li>
-            </ul>
-        </section>
-        <section id="care">
-            <h2>Taking Care of Yourself</h2>
-            <!-- Image -->
-            <figure>
-                <img src="img/washing-hands.jpg" alt="A pair of hands being washed in the sink.">
-                <figcaption>Photo by <cite><a href="https://unsplash.com/@fran_">Fran Jacquier</a></cite>.</figcaption>
-            </figure>
-            <p>
-                The <cite><a
-                        href="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html">CDC</a></cite>
-                has recommendations for staying healthy and preventing people from contracting COVID-19.
-            </p>
-            <ul>
-                <li>Know and Understand how COVID-19 spreads</li>
-                <li>Wash your hands often</li>
-                <li>Avoid close contact</li>
-                <li>Cover your mouth and nose with a mask when around others</li>
-                <li>Cover coughs and sneezes</li>
-                <li>Clean and disinfect</li>
-                <li>Monitor Your Health Daily</li>
-            </ul>
-            <p>
-                According to the <cite><a
-                        href="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html">CDC</a></cite>
-                , the virus is thought to be spread primarily from person-to-person. This means that to spread from
-                person to person, individuals are likely within 6 feet of each other, close to someone who is coughing
-                or sneezing. When a person coughs or sneezes, respiratory droplets are produced and can travel through
-                the air and into the mouths or noses of nearby people. Recent studies also suggest that COVID-19 may
-                also be spread between people not showing symptoms.
-            </p>
-        </section>
-        <section id="timeline">
-            <h2>Timeline of the Coronavirus</h2>
-            <!-- Image -->
-            <figure>
-                <img src="img/flags.jpg" alt="Flags of countries">
-                <figcaption>Photo by <cite><a href="https://unsplash.com/@kaung_myat_min">Kaung Myat Min</a></cite>.
-                </figcaption>
-            </figure>
-            <p>
-                The coronavirus began in Wuhan, China during late 2019. Since then, the virus has turned into a global
-                pandemic that has ravaged the world. To put the extent of the virus into perspective, <cite><a
-                        href="https://www.businessinsider.com/coronavirus-pandemic-timeline-history-major-events-2020-3?op=1">Business
-                        Insider</a></cite> has put together a timeline showing how the virus has spread since its
-                beginning in Wuhan, China. Excerpts of the timeline are reproduced here:
-            </p>
-            <ul>
-                <li>December 31, 2019 - Chinese Health officials inform the WHO about a cluster of 41 patients with a
-                    mysterious pneumonia. Most are connected to Huanan Seafood Wholesale Market.</li>
-                <li>January 7, 2020 - Chinese authorities identify the virus that caused the pneumonia-like illness as a
-                    new type of coronavirus (called novel coronavirus or nCoV).</li>
-                <li>January 11, 2020 - China records its first death linked to the novel coronavirus.</li>
-                <li>January 20, 2020 - The first US case is reported: a 35-year-old man in Snohomish County, Washington.
-                </li>
-                <li>January 30, 2020 - WHO declares a global public-health emergency.</li>
-                <li>February 6, 2020 - A person in California dies from the coronavirus, the first known American death.
-                </li>
-                <li>March 8, 2020 - Italy places all 60 million of its residents on lockdown.</li>
-                <li>March 11, 2020 - WHO declares the outbreak a pandemic.</li>
-                <li>March 13, 2020 - Trump declares a national emergency.</li>
-                <li>March 26, 2020 - Total confirmed cases in the US reach 82,404-the highest in the world-surpassing
-                    China's 81,782 and Italy's 80,589.</li>
-                <li>April 10, 2020 - The global death toll surpasses 100,000.</li>
-                <li>May 21, 2020 - The number of global COVID-19 cases surpasses 5 million.</li>
-                <li>June 28, 2020 - The number of global COVID-19 cases surpasses 10 million, and global deaths surpass
-                    500,000.</li>
-                <li>September 22, 2020 - US deaths from COVID-19 top 200,000.</li>
-                <li>September 28, 2020 - Global COVID-19 deaths surpass 1 million.</li>
-            </ul>
-        </section>
+        </div>
+        </div>
+        <div class="container">
+            <section id="origin">
+                <h2>Origin</h2>
+                <p>
+                    The coronavirus originated in Wuhan, China. According to <cite><a
+                            href="https://www.webmd.com/lung/coronavirus-history">WebMD</a></cite>, the coronavirus
+                    began in
+                    what is called
+                    a "wet-market," where fresh meat and fish is sold daily and some animals sold are killed on the
+                    spot.
+                    "Some wet markets sell wild or banned species like cobras, wild boars, and raccoon dogs. Crowded
+                    conditions can let viruses from different animals swap genes. Sometimes the virus changes so
+                    much it
+                    can
+                    start to infect and spread among people. Still, the Wuhan market didn't sell bats at the time of
+                    the
+                    outbreak. That’s why early suspicion also fell on pangolins, also called scaly anteaters, which
+                    are
+                    sold
+                    illegally in some markets in China. Some coronaviruses that infect pangolins are similar to
+                    SARS-CoV-2
+                    (a coronavirus).
+                    As SARS-CoV-2 spread both inside and outside China, it infected people who have had no direct
+                    contact
+                    with animals. That meant the virus is transmitted from one human to another. It’s now spreading
+                    in
+                    the
+                    U.S. and around the globe, meaning that people are unwittingly catching and passing on the
+                    coronavirus."
+                </p>
+            </section>
+        </div>
+        <div class="container">
+            <section id="symptoms">
+                <h2>Symptoms</h2>
+                <p>
+                    The coronavirus causes symptoms of shortness of breath or difficulty breathing, fever or chills,
+                    cough,
+                    fatigue, muscle or body aches, headache, new loss of taste or smell, sore throat, congestion or
+                    runny
+                    nose,
+                    nausea or vomiting, and diarrhea. Symptoms listed here are from the <cite><a
+                            href="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html">CDC</a></cite>.
+                </p>
+                <p>
+                    Should you experience these symptoms, it is important to visit your doctor to get tested. The
+                    <cite><a
+                            href="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html">CDC</a></cite>
+                    also
+                    highlights certain symtpoms that if experienced should be treated as soon as possible:
+                </p>
+                <ul>
+                    <li>Trouble breathing</li>
+                    <li>Persistent pain or pressure in the chest</li>
+                    <li>New confusion</li>
+                    <li>Inability to wake or stay awake</li>
+                    <li>Bluish lips or face</li>
+                </ul>
+            </section>
+        </div>
+        <div class="container">
+            <section id="care">
+                <h2>Taking Care of Yourself</h2>
+                <!-- Image -->
+                <figure>
+                    <img src="img/washing-hands.jpg" alt="A pair of hands being washed in the sink.">
+                    <figcaption>Photo by <cite><a href="https://unsplash.com/@fran_">Fran Jacquier</a></cite>.
+                    </figcaption>
+                </figure>
+                <p>
+                    The <cite><a
+                            href="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html">CDC</a></cite>
+                    has recommendations for staying healthy and preventing people from contracting COVID-19.
+                </p>
+                <ul>
+                    <li>Know and Understand how COVID-19 spreads</li>
+                    <li>Wash your hands often</li>
+                    <li>Avoid close contact</li>
+                    <li>Cover your mouth and nose with a mask when around others</li>
+                    <li>Cover coughs and sneezes</li>
+                    <li>Clean and disinfect</li>
+                    <li>Monitor Your Health Daily</li>
+                </ul>
+                <p>
+                    According to the <cite><a
+                            href="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html">CDC</a></cite>
+                    , the virus is thought to be spread primarily from person-to-person. This means that to spread
+                    from
+                    person to person, individuals are likely within 6 feet of each other, close to someone who is
+                    coughing
+                    or sneezing. When a person coughs or sneezes, respiratory droplets are produced and can travel
+                    through
+                    the air and into the mouths or noses of nearby people. Recent studies also suggest that COVID-19
+                    may
+                    also be spread between people not showing symptoms.
+                </p>
+            </section>
+        </div>
+        <div class="container">
+            <section id="timeline">
+                <h2>Timeline of the Coronavirus</h2>
+                <!-- Image -->
+                <figure>
+                    <img src="img/flags.jpg" alt="Flags of countries">
+                    <figcaption>Photo by <cite><a href="https://unsplash.com/@kaung_myat_min">Kaung Myat
+                                Min</a></cite>.
+                    </figcaption>
+                </figure>
+                <p>
+                    The coronavirus began in Wuhan, China during late 2019. Since then, the virus has turned into a
+                    global
+                    pandemic that has ravaged the world. To put the extent of the virus into perspective, <cite><a
+                            href="https://www.businessinsider.com/coronavirus-pandemic-timeline-history-major-events-2020-3?op=1">Business
+                            Insider</a></cite> has put together a timeline showing how the virus has spread since
+                    its
+                    beginning in Wuhan, China. Excerpts of the timeline are reproduced here:
+                </p>
+                <ul>
+                    <li>December 31, 2019 - Chinese Health officials inform the WHO about a cluster of 41 patients
+                        with
+                        a
+                        mysterious pneumonia. Most are connected to Huanan Seafood Wholesale Market.</li>
+                    <li>January 7, 2020 - Chinese authorities identify the virus that caused the pneumonia-like
+                        illness
+                        as a
+                        new type of coronavirus (called novel coronavirus or nCoV).</li>
+                    <li>January 11, 2020 - China records its first death linked to the novel coronavirus.</li>
+                    <li>January 20, 2020 - The first US case is reported: a 35-year-old man in Snohomish County,
+                        Washington.
+                    </li>
+                    <li>January 30, 2020 - WHO declares a global public-health emergency.</li>
+                    <li>February 6, 2020 - A person in California dies from the coronavirus, the first known
+                        American
+                        death.
+                    </li>
+                    <li>March 8, 2020 - Italy places all 60 million of its residents on lockdown.</li>
+                    <li>March 11, 2020 - WHO declares the outbreak a pandemic.</li>
+                    <li>March 13, 2020 - Trump declares a national emergency.</li>
+                    <li>March 26, 2020 - Total confirmed cases in the US reach 82,404-the highest in the
+                        world-surpassing
+                        China's 81,782 and Italy's 80,589.</li>
+                    <li>April 10, 2020 - The global death toll surpasses 100,000.</li>
+                    <li>May 21, 2020 - The number of global COVID-19 cases surpasses 5 million.</li>
+                    <li>June 28, 2020 - The number of global COVID-19 cases surpasses 10 million, and global deaths
+                        surpass
+                        500,000.</li>
+                    <li>September 22, 2020 - US deaths from COVID-19 top 200,000.</li>
+                    <li>September 28, 2020 - Global COVID-19 deaths surpass 1 million.</li>
+                </ul>
+            </section>
+        </div>
     </main>
     <footer>
         Contact <a href="mailto:amazingspencer13@gmail.com">Spencer</a>.
