@@ -19,7 +19,7 @@ body {
     color: white;
 }
 
-.nav-link:hover, .nav-link:focus, .navbar-brand:hover, .navbar-brand:focus {
+.nav-link:hover, .nav-link:focus {
     color: black;
 }
 
@@ -61,4 +61,8 @@ img {
     width: 400px;
     height: 400px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
+}
+
+cite a{
+    color: black;
 }
