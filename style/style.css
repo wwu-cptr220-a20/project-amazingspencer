@@ -49,7 +49,7 @@ body {
 }
 
 .parallax-section {
-    background-image: url('img/coronavirus.png');
+    background-image: url('../img/coronavirus.png');
     min-height: 500px;
     width: 100%;
     background-attachment: fixed;
