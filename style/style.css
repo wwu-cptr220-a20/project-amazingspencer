@@ -1,5 +1,5 @@
 body {
-    margin: 8px;
+    margin: 0px;
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
 }
@@ -20,7 +20,7 @@ body {
 }
 
 .nav-link:hover, .nav-link:focus {
-    color: black;
+    color: #9ea7aa;
 }
 
 /* Icon style */
@@ -48,8 +48,30 @@ body {
     border: none;
 }
 
-.super-container {
-    flex-direction: column;
+.parallax-section {
+    background-image: url(/img/coronavirus.png);
+    min-height: 500px;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.sub-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.parallax-section > h1 {
+    font-weight: 900;
+    margin-top: 4rem;
+    color: white;
+}
+
+.parallax-section > h2 {
+    color: white;
 }
 
 h1 {
@@ -58,11 +80,57 @@ h1 {
 }
 
 img {
-    width: 400px;
-    height: 400px;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 90%;
+    margin: 20px auto;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
 }
 
-cite a{
+.card {
+    flex: 1 0 250px;
+    background-color: #eee;
+    margin: .5rem;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);   
+}
+
+.card h2, .card p {
+    margin: 5px;
+    text-align: center;
+}
+
+.card a {
+    border: none;
+    background-color: #0d47a1;
+    border-radius: 0 0 10px 10px;
+}
+
+.card a {
+    color: white;
+}
+
+.card a:hover, .card a:focus {
+    background-color: #5472d3;
+}
+
+.card img {
+    width: 11em;
+    height: 12em;
+
+}
+
+#timeline ul {
+    background-color: #eee;
+}
+
+cite a, footer a{
     color: black;
+}
+
+footer {
+    position: absolute;
+    border-radius: 4px;
+    background-color: #eee;
 }

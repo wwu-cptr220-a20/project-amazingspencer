@@ -16,6 +16,17 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="style/style.css">
+    <!-- Bootstrap JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -48,26 +59,35 @@
     </header>
     <main>
         <div class="container">
-            <section id="team">
+            <section class="container" id="team">
                 <p>
-                    Currently, there is one team member.
+                    Currently, there is one team member. More will be added later (hopefully).
                 </p>
-                <p>More will be added later (hopefully).</p>
                 <ul>
                     <li>Spencer Nielsen</li>
                 </ul>
             </section>
-        </div>
-        <div class="container">
-            <section id="background">
-                <h2>Backgrounds</h2>
-                <h3>Spencer Nielsen</h3>
-                <img src="img/spencer.jpg" alt="A photograph of Spencer Nielsen">
-                <p>
-                    Spencer Nielsen is currently attending college at Walla Walla University, where he is studying
-                    Information Systems. This website has been created as part of a project for CPTR220 Web Application
-                    Development.
-                </p>
+
+            <section class="column" id="background">
+                <div class="sub-container">
+                    <div class="card">
+                        <img src="img/spencer.jpg" alt="A photograph of Spencer Nielsen">
+                        <h2>Spencer Nielsen</h2>
+                        <p>
+                            Spencer Nielsen is currently attending college at Walla Walla University, where he is
+                            studying
+                            Information Systems. This website has been created as part of a project for CPTR220 Web
+                            Application
+                            Development.
+                        </p>
+                        <a href="mailto:amazingspencer13@gmail.com">
+                            <span class="contact" aria-label="button">
+                                <p>Contact</p>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </section>
             </section>
         </div>
     </main>
