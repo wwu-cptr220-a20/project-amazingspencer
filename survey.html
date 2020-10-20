@@ -9,9 +9,10 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
     <link rel="manifest" href="favicon/site.webmanifest">
-    <title>COVID-19 - Cases</title>
+    <title>COVID-19 - Survey</title>
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/08a93ca9f2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style/style.css">
     <!-- Bootstrap JavaScript -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -22,10 +23,12 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
+    <!-- jQuery -->
+    <link href="https://surveyjs.azureedge.net/1.8.9/modern.css" type="text/css" rel="stylesheet" />
+    <script src="https://surveyjs.azureedge.net/1.8.9/survey.jquery.min.js"></script>
     <!-- Stylesheets -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="style/style.css">
 </head>
 
 <body>
@@ -56,20 +59,16 @@
                 </ul>
             </div>
         </nav>
-        <h1>Cases</h1>
     </header>
     <main>
-        <div class="container">
-            <section id="case-count">
-                <h2>World Case Numbers</h2>
-                <p>The world case numbers will brought in here, either through a web API or some other means.</p>
-            </section>
-        </div>
+        <div id="surveyContainer"></div>
     </main>
     <footer>
         Contact <a href="mailto:amazingspencer13@gmail.com">Spencer</a>.
         Spencer Nielsen &copy; All rights reserved.
     </footer>
+    <!-- Survey.js JavaScript file -->
+    <script src="/js/survey.js"></script>
 </body>
 
 </html>
