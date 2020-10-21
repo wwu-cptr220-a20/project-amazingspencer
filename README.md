@@ -27,3 +27,8 @@ For stage-2, CSS and more HTML has been added to improve the overall look and fu
 ### Survey.js
 
 To implement the survey, I utilized Survey.js, which allowed me to create and set up my survey at https://surveyjs.io/create-survey. Once set up, I included the necessary JavaScript and HTML code to make it appear within the website. This was a fantastic way of adding a survey to my site. I saved a ton of time and created something that looks good on both mobile and desktop.
+
+### Google Map Coronavirus API
+#### Implemented by Samuel Hernadez
+
+As part of the coronavirus web application, Samuel Hernadez was able to implement a Google Map API that shows the user coronavirus stats for each country. The user views this information by clicking on a blue dot that is found within the borders of the country. The idea of utilizing a map like this, is to give users of the site an idea of how other countries are doing with the coronavirus.

@@ -59,7 +59,7 @@
                                 class="fas fa-syringe">&nbsp;Cases</i></a></li>
                     <li class="nav-item"><a class="nav-link" href="map.html"><i
                                 class="fas fa-map-marked-alt">&nbsp;Map</i></a></li>
-                    <li class="nav-item"><a class="nav-link" href="#care"><i
+                    <li class="nav-item"><a class="nav-link" href="index.html#care"><i
                                 class="fas fa-hand-holding-medical">&nbsp;Care</i></a></li>
                     <li class="nav-item"><a class="nav-link" href="survey.html"><i
                                 class="fas fa-poll">&nbsp;Survey</i></a></li>
@@ -68,7 +68,6 @@
                 </ul>
             </div>
         </nav>
-        */
         <h1>Map</h1>
     </header>
     <main>
@@ -76,7 +75,8 @@
         <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
         <script
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbPk_NONuQ7r1buVhCf_R4c32j_E660xc&callback=initMap" defer></script>
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbPk_NONuQ7r1buVhCf_R4c32j_E660xc&callback=initMap"
+            defer></script>
         <script type="module">
             import mapStyle from './js/map-style.js'
             const $map = document.querySelector('#map')
@@ -98,13 +98,13 @@
             }
             function renderExtraData({ confirmed, deaths, recovered, provincestate, countryregion }) {
                 return (`
-        <div>
-            <p> <strong>${provincestate} - ${countryregion}</strong> </p>
-            <p> confirmed: ${confirmed} </p>
-            <p> deaths: ${deaths} </p>
-            <p> recovered: ${recovered} </p>
-        </div>
-    `)
+                    <div>
+                        <p> <strong>${provincestate} - ${countryregion}</strong> </p>
+                        <p> confirmed: ${confirmed} </p>
+                        <p> deaths: ${deaths} </p>
+                        <p> recovered: ${recovered} </p>
+                    </div>
+                `)
             }
             const icon = './favicon/icon.png'
             const popup = new window.google.maps.InfoWindow()
