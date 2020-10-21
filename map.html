@@ -26,10 +26,22 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .map {
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
 </head>
 
 <body>
     <header>
+
         <nav class="navbar fixed-top navbar-expand-md">
             <div id="skip">
                 <a href="#overview">Skip to Content</a>
@@ -56,19 +68,66 @@
                 </ul>
             </div>
         </nav>
+        */
         <h1>Map</h1>
     </header>
     <main>
-        <div class="container">
-            <section id="map">
-                <p>
-                    The purpose of the map graphic is to display where coronavirus cases are occuring around the world.
-                </p>
-                <p>
-                    The map will be brought in either through a web API or some other means.
-                </p>
-            </section>
+        <div id="map" class="map"></div>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+        <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbPk_NONuQ7r1buVhCf_R4c32j_E660xc&callback=initMap" defer></script>
+        <script type="module">
+            import mapStyle from './js/map-style.js'
+            const $map = document.querySelector('#map')
+            const map = new window.google.maps.Map($map, {
+                center: {
+                    lat: 0,
+                    lng: 0
+                },
+                zoom: 3,
+                styles: mapStyle,
+
+            })
+
+            renderData()
+            async function getData() {
+                const response = await fetch('https://wuhan-coronavirus-api.laeyoung.endpoint.ainize.ai/jhu-edu/latest')
+                const data = await response.json()
+                return data
+            }
+            function renderExtraData({ confirmed, deaths, recovered, provincestate, countryregion }) {
+                return (`
+        <div>
+            <p> <strong>${provincestate} - ${countryregion}</strong> </p>
+            <p> confirmed: ${confirmed} </p>
+            <p> deaths: ${deaths} </p>
+            <p> recovered: ${recovered} </p>
         </div>
+    `)
+            }
+            const icon = './favicon/icon.png'
+            const popup = new window.google.maps.InfoWindow()
+            async function renderData() {
+                const data = await getData()
+                data.forEach(item => {
+                    const marker = new window.google.maps.Marker({
+                        position: {
+                            lat: item.location.lat,
+                            lng: item.location.lng,
+                        },
+                        map,
+                        icon,
+                        title: String(item.confirmed),
+                    })
+                    marker.addListener('click', () => {
+                        popup.setContent(renderExtraData(item))
+                        popup.open(map, marker)
+                    })
+                })
+            }
+        </script>
+
     </main>
     <footer>
         Contact <a href="mailto:amazingspencer13@gmail.com">Spencer</a>.
