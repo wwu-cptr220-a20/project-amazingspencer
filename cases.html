@@ -60,11 +60,12 @@
     </header>
     <main>
         <div class="container">
-            <section id="case-count">
-                <h2>World Case Numbers</h2>
-                <p>The world case numbers will brought in here, either through a web API or some other means.</p>
+            <section id="case-count" aria-live="polite">
+                <h2>World Cases:</h2>
+                <!-- Content is added dynamically through index.js -->
             </section>
         </div>
+        <script src="./js/index.js"></script>
     </main>
     <footer>
         Contact <a href="mailto:amazingspencer13@gmail.com">Spencer</a>.

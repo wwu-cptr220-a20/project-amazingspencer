@@ -9,7 +9,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
     <link rel="manifest" href="favicon/site.webmanifest">
-    <title>COVID-19 - Survey</title>
+    <title>COVID-19 - Map</title>
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/08a93ca9f2.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style/style.css">
@@ -66,7 +66,7 @@
         <script
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbPk_NONuQ7r1buVhCf_R4c32j_E660xc&callback=initMap"
             defer></script>
-        <script type="module">
+        <!-- <script type="module">
             import mapStyle from './js/map-style.js'
             const $map = document.querySelector('#map')
             const map = new window.google.maps.Map($map, {
@@ -86,14 +86,13 @@
                 return data
             }
             function renderExtraData({ confirmed, deaths, recovered, provincestate, countryregion }) {
-                return (`
+                return (
                     <div>
                         <p> <strong>${provincestate} - ${countryregion}</strong> </p>
                         <p> confirmed: ${confirmed} </p>
                         <p> deaths: ${deaths} </p>
                         <p> recovered: ${recovered} </p>
-                    </div>
-                `)
+                    </div>)
             }
             const icon = './favicon/icon.png'
             const popup = new window.google.maps.InfoWindow()
@@ -115,7 +114,7 @@
                     })
                 })
             }
-        </script>
+        </script> -->
 
     </main>
     <footer>

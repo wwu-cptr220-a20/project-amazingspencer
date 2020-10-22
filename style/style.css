@@ -139,3 +139,21 @@ footer {
     width: 100vw;
     height: 100vh;
 }
+
+.caseButton {
+    font-size: 30px;
+    margin-bottom: 1em;
+    color: white;
+    background-color: #0d47a1;
+    border: 0px solid white;
+    border-radius: 5px;
+}
+
+.caseButton:hover, .caseButton:focus {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+
+#case-count h2 {
+    font-weight: 800;
+    margin-bottom: 10px;
+}

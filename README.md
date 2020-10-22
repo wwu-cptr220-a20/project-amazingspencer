@@ -24,6 +24,8 @@ For stage-2, CSS and more HTML has been added to improve the overall look and fu
 
 ## Stage-3 Improvement
 
+Currently, Survey.js and Google Map Coronavirus API are not functional as the code was unable to pass the test suite with jest.
+
 ### Survey.js
 
 To implement the survey, I utilized Survey.js, which allowed me to create and set up my survey at https://surveyjs.io/create-survey. Once set up, I included the necessary JavaScript and HTML code to make it appear within the website. This was a fantastic way of adding a survey to my site. I saved a ton of time and created something that looks good on both mobile and desktop.
@@ -32,3 +34,7 @@ To implement the survey, I utilized Survey.js, which allowed me to create and se
 #### Implemented by Samuel Hernadez
 
 As part of the coronavirus web application, Samuel Hernadez was able to implement a Google Map API that shows the user coronavirus stats for each country. The user views this information by clicking on a blue dot that is found within the borders of the country. The idea of utilizing a map like this, is to give users of the site an idea of how other countries are doing with the coronavirus.
+
+### World Case Numbers using Coronavirus API
+
+For the page on cases, the same Coronavirus API was used to retrieve the data on the current world numbers for coronavirus around the world. The "Show Cases by Country" button provides a list of all the countries and their provinces along with a case count. The button can be used to toggle the list from visible and not visible.
