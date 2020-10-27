@@ -1,5 +1,6 @@
 body {
     margin: 0px;
+    padding-top: 50px;
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
 }
@@ -20,7 +21,7 @@ body {
 }
 
 .nav-link:hover, .nav-link:focus {
-    color: #9ea7aa;
+    color: #002171;
 }
 
 /* Icon style */
@@ -56,6 +57,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
 }
 
 .sub-container {
@@ -65,13 +67,28 @@ body {
 }
 
 .parallax-section > h1 {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
     font-weight: 900;
-    margin-top: 4rem;
     color: white;
+    background-color: #0d47a1;
+    border-radius: 7px;
 }
 
 .parallax-section > h2 {
+    margin: 0;
+    position: absolute;
+    top: 60%;
+    left: 40%;
+    margin-right: -50%;
+    transform: translate(0, -50%);
     color: white;
+    background-color: #0d47a1;
+    border-radius: 7px;
 }
 
 h1 {
