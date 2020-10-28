@@ -61,6 +61,7 @@
     </header>
     <main>
         <div id="surveyContainer"></div>
+        <p>Refresh the page to restart the survey.</p>
     </main>
     <footer>
         Contact <a href="mailto:amazingspencer13@gmail.com">Spencer</a>.
@@ -68,12 +69,13 @@
     </footer>
     <!-- Survey.js JavaScript -->
     <script>
+        var myCss = {
+            navigationButton: "btn btn-primary"
+        };
         Survey.StylesManager.applyTheme("bootstrap");
 
         var survey = new Survey.Model(surveyJSON);
-        $("#surveyContainer").Survey({
-            model: survey,
-        });
+        $("#surveyContainer").Survey({ model: survey, css: myCss });
     </script>
 </body>
 
