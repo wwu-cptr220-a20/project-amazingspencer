@@ -158,7 +158,8 @@ footer {
 }
 
 .caseButton {
-    font-size: 30px;
+    font-size: 31px;
+    margin-left: 5em;
     margin-bottom: 1em;
     color: white;
     background-color: #0d47a1;
@@ -167,6 +168,19 @@ footer {
 }
 
 .caseButton:hover, .caseButton:focus {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+
+.topCaseButton {
+    font-size: 30px;
+    margin-bottom: 1em;
+    color: white;
+    background-color: #0d47a1;
+    border: 0px solid white;
+    border-radius: 5px;
+}
+
+.topCaseButton:hover, .topCaseButton:focus {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
   }
 

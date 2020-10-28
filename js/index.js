@@ -5,8 +5,19 @@ const state = {
     countryCases: [{ visible: false }]
 };
 
+let lastUpdate = document.createElement('p');
+document.querySelector('#case-count').appendChild(lastUpdate);
+fetchDate(fetchData());
+
 let worldCaseCount = document.createElement('div');
 document.querySelector('#case-count').appendChild(worldCaseCount);
+
+// Gets the date the API was last updated
+async function fetchDate({ lastupdate }) {
+    let date = _.trim(lastupdate, 'T17:42:00.009Z');
+    lastUpdate.textContent = date;
+    console.log(lastUpdate);
+}
 
 // creates a header and inserts it into the DOM
 // Takes in a data item from API that has been formatted and a string
@@ -25,23 +36,6 @@ alert.classList.add('alert-danger');
 alert.textContent = 'Case data could not be retrieved';
 // Add the alert to a parent element
 document.querySelector('#case-count').insertBefore(alert, worldCaseCount);
-
-// Allow user to show cases by country.
-let button = document.createElement('button');
-button.classList.add('caseButton');
-button.textContent = 'Show cases by Country';
-document.querySelector('#case-count').insertBefore(button, worldCaseCount);
-
-// Button event listener to toggle the cases by country
-button.addEventListener('click', function () {
-    if (state.countryCases.visible === true) {
-        state.countryCases.visible = false;
-        removeData();
-    } else {
-        state.countryCases.visible = true;
-        displayData();
-    }
-})
 
 // Web API to display Coronavirus statistics, same source as Samuel Hernadez's on map.
 // Use of NumberFormat from MDN Docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
@@ -86,7 +80,7 @@ async function fetchData() {
 // Takes no arguments, creates an unordered list and calls createListItem.
 async function displayData() {
     const data = await fetchData();
-
+    console.log(data);
     let countryHeader = document.createElement('h3');
     countryHeader.textContent = 'Cases by Country:';
     countryHeader.classList.add('countryHeader');
@@ -100,12 +94,6 @@ async function displayData() {
     worldCaseCount.appendChild(list);
 }
 
-// Removes the data when the button is toggled.
-function removeData() {
-    worldCaseCount.removeChild(document.querySelector('.countryList'));
-    worldCaseCount.removeChild(document.querySelector('.countryHeader'));
-}
-
 // function to create list items containing all countries and cases.
 // Takes two arguments, one for country name, the other for number of cases.
 // Returns a list item to be appended to the unordered list.
@@ -114,4 +102,52 @@ function createListItem({ confirmed, provincestate, countryregion }) {
     listItem.textContent = countryregion + ' - ' + provincestate + ': ' + new Intl.NumberFormat().format(confirmed);
 
     return listItem;
+}
+
+// Create span containers for two side by side buttons
+let spanOne = document.createElement('span');
+spanOne.classList.add('caseSpan');
+document.querySelector('#case-count').insertBefore(spanOne, worldCaseCount);
+let spanTwo = document.createElement('span');
+spanTwo.classList.add('topSpan');
+document.querySelector('#case-count').insertBefore(spanTwo, worldCaseCount);
+
+// Allow user to see countries with most cases
+let buttonOne = document.createElement('button');
+buttonOne.classList.add('topCaseButton');
+buttonOne.textContent = 'Show Countries with Most Cases';
+document.querySelector('.caseSpan').appendChild(buttonOne);
+
+// Allow user to show cases by country.
+let buttonTwo = document.createElement('button');
+buttonTwo.classList.add('caseButton');
+buttonTwo.textContent = 'Show cases by Country';
+document.querySelector('.topSpan').appendChild(buttonTwo);
+
+// Button event listener to toggle countries with most cases
+buttonOne.addEventListener('click', function() {
+    const countries = fetchData();
+    if (state.countryCases.visible === true) {
+        state.countryCases.visible = false;
+        removeData();
+    } else {
+        state.countryCases.visible = true;
+    }
+})
+
+// Button event listener to toggle the cases by country
+buttonTwo.addEventListener('click', function () {
+    if (state.countryCases.visible === true) {
+        state.countryCases.visible = false;
+        removeData();
+    } else {
+        state.countryCases.visible = true;
+        displayData();
+    }
+})
+
+// Removes the data when the button is toggled.
+function removeData() {
+    worldCaseCount.removeChild(document.querySelector('.countryList'));
+    worldCaseCount.removeChild(document.querySelector('.countryHeader'));
 }
