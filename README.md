@@ -22,7 +22,7 @@ For stage-2, CSS and more HTML has been added to improve the overall look and fu
 * Box shadows around images
 * Various styling adjustments (i.e. fonts, and background colors)
 
-## Stage-3 Improvement
+## Stage-3 Improvements
 
 Currently, Survey.js and Google Map Coronavirus API are not functional as the code was unable to pass the test suite with jest.
 
@@ -38,3 +38,19 @@ As part of the coronavirus web application, Samuel Hernadez was able to implemen
 ### World Case Numbers using Coronavirus API
 
 For the page on cases, the same Coronavirus API was used to retrieve the data on the current world numbers for coronavirus around the world. The "Show Cases by Country" button provides a list of all the countries and their provinces along with a case count. The button can be used to toggle the list from visible and not visible.
+
+## Stage-4 Improvements
+
+For this stage of the project, more improvements have been made and some issues with the last stage have been resolved.
+
+### [Survey.js](https://surveyjs.io/create-survey) Updates
+
+Survey.js is now working appropriately and is passing the tests with jest. The survey has also been styled to look more in line with the rest of the site. A link has been added to Survey.js survey creator in the title.
+
+### Google Map Coronavirus API Updates
+
+The map feature is undergoing bug fixing and being revised to pass the jest tests. It is still unable to pass the testing at this time. (10/28/2020) Samuel Hernadez and Hayden Tinker are actively working on this solution.
+
+### Last Updated Header Added Using [Lodash](https://lodash.com/)
+
+To fulfill stage-4 requirements, Lodash has been used to implement a header that informs the user when the data was last updated. This will be helpful, as it will put confidence in users that the coronavirus data presented is up to date and accurate. Lodash functions used were "_.sample" and "_.truncate". A link has been included to the Lodash Library in the title.
