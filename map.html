@@ -56,15 +56,16 @@
                 </ul>
             </div>
         </nav>
-        <h1>Map</h1>
     </header>
     <main>
         <div id="map" class="map"></div>
         <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
-        <script
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbPk_NONuQ7r1buVhCf_R4c32j_E660xc&callback=initMap"
-            defer></script>
+
+        <script defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbPk_NONuQ7r1buVhCf_R4c32j_E660xc&callback=initMap">
+            </script>
+
         <script type="module">
             import mapStyle from './js/map-style.js'
             const $map = document.querySelector('#map')
@@ -74,6 +75,8 @@
                     lng: 0
                 },
                 zoom: 3,
+                minZoom: 3,
+                maxZoom: 8,
                 styles: mapStyle,
 
             })
@@ -85,13 +88,14 @@
                 return data
             }
             function renderExtraData({ confirmed, deaths, recovered, provincestate, countryregion }) {
-                return (
-                    <div>
-                        <p> <strong>${provincestate} - ${countryregion}</strong> </p>
-                        <p> confirmed: ${confirmed} </p>
-                        <p> deaths: ${deaths} </p>
-                        <p> recovered: ${recovered} </p>
-                    </div>)
+                return (`
+        <div
+            <p> <strong>${provincestate} - ${countryregion}</strong> </p>
+            <p> confirmed: ${confirmed} </p>
+            <p> deaths: ${deaths} </p>
+            <p> recovered: ${recovered} </p>
+        </div>
+    `)
             }
             const icon = './favicon/icon.png'
             const popup = new window.google.maps.InfoWindow()
@@ -116,11 +120,6 @@
         </script>
 
     </main>
-    <footer>
-        Contact <a href="mailto:amazingspencer13@gmail.com">Spencer</a>.
-        Spencer Nielsen &copy; All rights reserved.
-        <p>Data from <cite><a href="https://github.com/Laeyoung/COVID-19-API">Laeyoung COVID-19-API</a></cite>.</p>
-    </footer>
 </body>
 
 </html>
