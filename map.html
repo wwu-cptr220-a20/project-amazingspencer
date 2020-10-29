@@ -29,6 +29,7 @@
 </head>
 
 <body>
+
     <header>
 
         <nav class="navbar fixed-top navbar-expand-md">
@@ -56,9 +57,11 @@
                 </ul>
             </div>
         </nav>
+
     </header>
+
     <main>
-        <div id="map" class="map"></div>
+        <div id="map" class="map" style="width: auto; height: 750px; margin:auto;"></div>
         <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
 
@@ -78,8 +81,21 @@
                 minZoom: 3,
                 maxZoom: 8,
                 styles: mapStyle,
+                disableDefaultUI: true,
+                mapTypeId: google.maps.MapTypeId.HYBRID,
+                restriction: {
+                    latLngBounds: {
+                        north: 1,
+                        south: -1,
+                        east: -5,
+                        west: -5,
+                    }
+
+
+                }
 
             })
+
 
             renderData()
             async function getData() {
@@ -96,6 +112,7 @@
             <p> recovered: ${recovered} </p>
         </div>
     `)
+
             }
             const icon = './favicon/icon.png'
             const popup = new window.google.maps.InfoWindow()
@@ -116,7 +133,9 @@
                         popup.open(map, marker)
                     })
                 })
+
             }
+
         </script>
 
     </main>
