@@ -9,7 +9,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
     <link rel="manifest" href="favicon/site.webmanifest">
-    <title>COVID-19 - Survey</title>
+    <title>COVID-19 - Map</title>
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/08a93ca9f2.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style/style.css">
@@ -26,40 +26,29 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
-    <style>
-        body {
-            margin: 0;
-        }
-
-        .map {
-            width: 100vw;
-            height: 100vh;
-        }
-    </style>
 </head>
 
 <body>
+
     <header>
 
         <nav class="navbar fixed-top navbar-expand-md">
             <div id="skip">
                 <a href="#overview">Skip to Content</a>
             </div>
-            <span class="navbar-brand">COVID-19</span>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"><i class="fas fa-bars hamburger"></i></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mr-auto nav">
+                <ul class="navbar-nav mx-auto nav">
                     <li class="nav-item active"><a class="nav-link" href="index.html"><i
                                 class="fa fa-fw fa-home">&nbsp;Home</i></a></li>
                     <li class="nav-item"><a class="nav-link" href="cases.html"><i
                                 class="fas fa-syringe">&nbsp;Cases</i></a></li>
                     <li class="nav-item"><a class="nav-link" href="map.html"><i
                                 class="fas fa-map-marked-alt">&nbsp;Map</i></a></li>
-                    <li class="nav-item"><a class="nav-link" href="#care"><i
+                    <li class="nav-item"><a class="nav-link" href="index.html#care"><i
                                 class="fas fa-hand-holding-medical">&nbsp;Care</i></a></li>
                     <li class="nav-item"><a class="nav-link" href="survey.html"><i
                                 class="fas fa-poll">&nbsp;Survey</i></a></li>
@@ -70,17 +59,16 @@
         </nav>
 
     </header>
-    <main>
-        <div id="map" class="map"></div>
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
+    <main>
+        <div id="map" class="map" style="width: auto; height: 800px; margin:auto;"></div>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
         <script defer
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbPk_NONuQ7r1buVhCf_R4c32j_E660xc&callback=initMap">
             </script>
 
         <script type="module">
-            import mapStyle from './js/map-style.js'
             const $map = document.querySelector('#map')
             const map = new window.google.maps.Map($map, {
                 center: {
@@ -90,9 +78,21 @@
                 zoom: 3,
                 minZoom: 3,
                 maxZoom: 8,
-                styles: mapStyle,
+                disableDefaultUI: true,
+                mapTypeId: google.maps.MapTypeId.HYBRID,
+                restriction: {
+                    latLngBounds: {
+                        north: 1,
+                        south: -1,
+                        east: -5,
+                        west: -5,
+                    }
+
+
+                }
 
             })
+
 
             renderData()
             async function getData() {
@@ -102,13 +102,14 @@
             }
             function renderExtraData({ confirmed, deaths, recovered, provincestate, countryregion }) {
                 return (`
-        <div
-            <p> <strong>${provincestate} - ${countryregion}</strong> </p>
+    <div>
+            <p> <strong>${countryregion} ${proviÍncestate} </strong> </p>
             <p> confirmed: ${confirmed} </p>
             <p> deaths: ${deaths} </p>
             <p> recovered: ${recovered} </p>
         </div>
     `)
+
             }
             const icon = './favicon/icon.png'
             const popup = new window.google.maps.InfoWindow()
@@ -129,11 +130,12 @@
                         popup.open(map, marker)
                     })
                 })
+
             }
+
         </script>
 
     </main>
-
 </body>
 
 </html>
