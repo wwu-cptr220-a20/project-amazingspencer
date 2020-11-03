@@ -9,6 +9,8 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "inline-css": "^2.6.3",
     "jest-style-matchers": "^0.1.2"
   },
   "eslintConfig": {
