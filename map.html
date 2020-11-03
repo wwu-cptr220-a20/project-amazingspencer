@@ -61,7 +61,7 @@
     </header>
 
     <main>
-        <div id="map" class="map" style="width: auto; height: 800px; margin:auto;"></div>
+        <div id="map" class="map" style="width: auto; height: 750px; margin:auto;"></div>
         <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
         <script defer
@@ -78,6 +78,7 @@
                 zoom: 3,
                 minZoom: 3,
                 maxZoom: 8,
+                styles: mapStyle,
                 disableDefaultUI: true,
                 mapTypeId: google.maps.MapTypeId.HYBRID,
                 restriction: {

@@ -23,9 +23,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
-    <!-- jQuery -->
-    <link href="https://surveyjs.azureedge.net/1.8.9/modern.css" type="text/css" rel="stylesheet" />
-    <script src="https://surveyjs.azureedge.net/1.8.9/survey.jquery.min.js"></script>
+    <!-- Survey jQuery -->
+    <script src="https://surveyjs.azureedge.net/1.8.11/survey.jquery.min.js"></script>
+    <script src="./library-js/survey.js"></script>
     <!-- Stylesheets -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -37,20 +37,19 @@
             <div id="skip">
                 <a href="#overview">Skip to Content</a>
             </div>
-            <span class="navbar-brand">COVID-19</span>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"><i class="fas fa-bars hamburger"></i></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mr-auto nav">
+                <ul class="navbar-nav mx-auto nav">
                     <li class="nav-item active"><a class="nav-link" href="index.html"><i
                                 class="fa fa-fw fa-home">&nbsp;Home</i></a></li>
                     <li class="nav-item"><a class="nav-link" href="cases.html"><i
                                 class="fas fa-syringe">&nbsp;Cases</i></a></li>
                     <li class="nav-item"><a class="nav-link" href="map.html"><i
                                 class="fas fa-map-marked-alt">&nbsp;Map</i></a></li>
-                    <li class="nav-item"><a class="nav-link" href="#care"><i
+                    <li class="nav-item"><a class="nav-link" href="index.html#care"><i
                                 class="fas fa-hand-holding-medical">&nbsp;Care</i></a></li>
                     <li class="nav-item"><a class="nav-link" href="survey.html"><i
                                 class="fas fa-poll">&nbsp;Survey</i></a></li>
@@ -62,13 +61,22 @@
     </header>
     <main>
         <div id="surveyContainer"></div>
+        <p>Refresh the page to restart the survey.</p>
     </main>
     <footer>
         Contact <a href="mailto:amazingspencer13@gmail.com">Spencer</a>.
         Spencer Nielsen &copy; All rights reserved.
     </footer>
-    <!-- Survey.js JavaScript file -->
-    <script src="/js/survey.js"></script>
+    <!-- Survey.js JavaScript -->
+    <script>
+        var myCss = {
+            navigationButton: "btn btn-primary"
+        };
+        Survey.StylesManager.applyTheme("bootstrap");
+
+        var survey = new Survey.Model(surveyJSON);
+        $("#surveyContainer").Survey({ model: survey, css: myCss });
+    </script>
 </body>
 
 </html>

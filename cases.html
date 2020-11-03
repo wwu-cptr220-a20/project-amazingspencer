@@ -26,28 +26,28 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="style/style.css">
+    <!-- Lodash -->
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.20/lodash.min.js"></script>
 </head>
-
 <body>
     <header>
         <nav class="navbar fixed-top navbar-expand-md">
             <div id="skip">
                 <a href="#overview">Skip to Content</a>
             </div>
-            <span class="navbar-brand">COVID-19</span>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"><i class="fas fa-bars hamburger"></i></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mr-auto nav">
+                <ul class="navbar-nav mx-auto nav">
                     <li class="nav-item active"><a class="nav-link" href="index.html"><i
                                 class="fa fa-fw fa-home">&nbsp;Home</i></a></li>
                     <li class="nav-item"><a class="nav-link" href="cases.html"><i
                                 class="fas fa-syringe">&nbsp;Cases</i></a></li>
                     <li class="nav-item"><a class="nav-link" href="map.html"><i
                                 class="fas fa-map-marked-alt">&nbsp;Map</i></a></li>
-                    <li class="nav-item"><a class="nav-link" href="#care"><i
+                    <li class="nav-item"><a class="nav-link" href="index.html#care"><i
                                 class="fas fa-hand-holding-medical">&nbsp;Care</i></a></li>
                     <li class="nav-item"><a class="nav-link" href="survey.html"><i
                                 class="fas fa-poll">&nbsp;Survey</i></a></li>
@@ -56,19 +56,21 @@
                 </ul>
             </div>
         </nav>
-        <h1>Cases</h1>
     </header>
     <main>
         <div class="container">
-            <section id="case-count">
-                <h2>World Case Numbers</h2>
-                <p>The world case numbers will brought in here, either through a web API or some other means.</p>
+            <section id="case-count" aria-live="polite">
+                <h1>World Cases:</h1>
+                <!-- Content is added dynamically through index.js -->
             </section>
         </div>
+        <script src="./js/index.js"></script>
+        <script src="./library-js/lastUpdate.js"></script>
     </main>
     <footer>
         Contact <a href="mailto:amazingspencer13@gmail.com">Spencer</a>.
         Spencer Nielsen &copy; All rights reserved.
+        <p>Data from <cite><a href="https://github.com/Laeyoung/COVID-19-API">Laeyoung COVID-19-API</a></cite>.</p>
     </footer>
 </body>
 
