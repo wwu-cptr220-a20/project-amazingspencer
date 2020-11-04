@@ -64,13 +64,11 @@
         <div id="map" class="map" style="width: auto; height: 750px; margin:auto;"></div>
         <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
-
         <script defer
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbPk_NONuQ7r1buVhCf_R4c32j_E660xc&callback=initMap">
             </script>
 
         <script type="module">
-            import mapStyle from './js/map-style.js'
             const $map = document.querySelector('#map')
             const map = new window.google.maps.Map($map, {
                 center: {
@@ -105,8 +103,8 @@
             }
             function renderExtraData({ confirmed, deaths, recovered, provincestate, countryregion }) {
                 return (`
-        <div
-            <p> <strong>${provincestate} - ${countryregion}</strong> </p>
+    <div>
+            <p> <strong>${countryregion} ${proviÍncestate} </strong> </p>
             <p> confirmed: ${confirmed} </p>
             <p> deaths: ${deaths} </p>
             <p> recovered: ${recovered} </p>
