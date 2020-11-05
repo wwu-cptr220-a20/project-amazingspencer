@@ -1,9 +1,4 @@
 const fs = require('fs');
-const cheerio = require('cheerio') //for html testing
-const inlineCss = require('inline-css'); //for css testing
-
-//absolute path for relative loading (if needed)
-const baseDir = 'file://' + __dirname + '/';
 
 //include custom matchers
 const styleMatchers = require('jest-style-matchers');
@@ -45,62 +40,6 @@ describe('Source code is valid', () => {
     }
   })
 });
-
-// Testing Structure inspired by previous problem set tests.
-// Load HTML file once
-const htmlPath = __dirname + '/index.html';
-const htmlFile = fs.readFileSync(htmlPath, 'utf-8');
-// Load CSS file once
-const cssPath = __dirname + '/style/style.css';
-const cssFile = fs.readFileSync(cssPath, 'utf-8');
-
-describe('Content and HTML is valid.', () => {
-  let $; //cheerio instance
-
-  beforeAll(async () => {
-    //test CSS by inlining properties and then reading them from cheerio
-    let inlined = await inlineCss(htmlFile, { extraCss: cssFile, url: baseDir, removeLinkTags: false });
-    $ = cheerio.load(inlined);
-  })
-
-  // Select and determine if an image exists within each section
-  test('1. Includes 3 images on home page.', () => {
-    let overviewFigure = $('#overview > figure');
-    expect(overviewFigure.children('img').length).toBe(1);
-
-    let careFigure = $('#care > figure');
-    expect(careFigure.children('img').length).toBe(1);
-
-    let timelineFigure = $('#timeline > figure');
-    expect(timelineFigure.children('img').length).toBe(1);
-  })
-
-  test('2. Includes a header, main, footer, and a navbar on all pages.', () => {
-    // let htmlFiles = fs.readdirSync(__dirname).filter((f) => f.endsWith('.html')); // reuse same variable from above
-    // for (let f of htmlFiles) {
-    //   let inline = await inlineCss(__dirname + f, { extraCss: cssFile, url: baseDir, removeLinkTags: false });
-    //   $ = cheerio.load(inline);
-    //   console.log($);
-    let body = $('body');
-    expect(body.children('header').length).toBe(1); // has header
-    expect(body.children('header').children('nav').length).toBe(1); // has navbar
-    expect(body.children('main').length).toBe(1); // has main
-    expect(body.children('footer').length).toBe(1); // has footer
-    // }
-  })
-
-  // Select nav and determine if at least 3 links exist
-  test('3. Navbar must contain more than 3 links.', () => {
-    let navLinks = $('#navbarNav > ul');
-    expect(navLinks.children('li').length).toBeGreaterThan(3);
-  })
-
-  // Ensure all favicon images are present
-  test('4. Includes a favicon on all pages.', () => {
-    let faviconLinks = $('.favicon');
-    expect(faviconLinks.length).toBe(4);
-  })
-})
 
 describe('Style and CSS is valid.', () => {
   let $; //cheerio instance
