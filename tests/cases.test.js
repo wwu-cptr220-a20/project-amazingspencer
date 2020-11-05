@@ -45,3 +45,27 @@ describe('Content and HTML is valid.', () => {
     expect(faviconLinks.length).toBe(4);
   })
 })
+
+describe('Style and CSS is valid.', () => {
+  let $; //cheerio instance
+
+  beforeAll(async () => {
+    //test CSS by inlining properties and then reading them from cheerio
+    let inlined = await inlineCss(htmlFile, { extraCss: cssFile, url: baseDir, removeLinkTags: false });
+    $ = cheerio.load(inlined);
+  })
+
+  // Ensure navbar is colored properly
+  test('1. Navbars are all colored: #0d47a1.', () => {
+    let navBar = $('.navbar');
+    expect(navBar.css('background-color')).toEqual('#0d47a1');
+  })
+
+  // Ensure correct font is used
+  test('2. Body text is Roboto and <h1> headings have font weight of 900.', () => {
+    let body = $('body');
+    let primaryHeadings = $('h1');
+    expect(body.css('font-family')).toEqual('\'Roboto\', sans-serif');
+    expect(primaryHeadings.css('font-weight')).toEqual('900');
+  })
+})
