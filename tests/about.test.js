@@ -71,6 +71,11 @@ describe('Style and CSS is valid.', () => {
 
   // About page is styled appropriately
   test('3. About section styled properly with cards.', () => {
-    
+    let card = $('.card'); // Card is styled appropriately
+    expect(card.css('flex')).toEqual('1 0 250px');
+    expect(card.css('background-color')).toEqual('#eee');
+    expect(card.css('margin')).toEqual('.5rem');
+    expect(card.css('border-radius')).toEqual('10px');
+    expect(card.css('box-shadow')).toEqual('0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23)')
   })
 })
