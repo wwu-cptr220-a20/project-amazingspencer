@@ -55,11 +55,11 @@ The map feature is undergoing bug fixing and being revised to pass the jest test
 
 To fulfill stage-4 requirements, Lodash has been used to implement a header that informs the user when the data was last updated. This will be helpful, as it will put confidence in users that the coronavirus data presented is up to date and accurate. Lodash functions used were "_.sample" and "_.truncate". A link has been included to the Lodash Library in the title.
 
-### Stage-5: Testing
+## Stage-5: Testing
 
 For Stage-5, our team has added tests to ensure that our website is functioning as it should. We have added tests for all HTML files to check that content is present and styled appropriately. We have also added tests for some of our functionality, in particular, the "Cases" page.
 
-#### Contributions:
+### Contributions:
 
 Our team's contributions are listed below:
 * Samuel Hernadez - Full map functionality ("Map" page), implemented Google Map along with Coronavirus API, and added test for this aspect.
