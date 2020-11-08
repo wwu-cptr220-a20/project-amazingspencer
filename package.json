@@ -41,6 +41,6 @@
   },
   "dependencies": {
     "normalize.css": "^8.0.1",
-    "survey-jquery": "^1.8.11"
+    "survey-jquery": "^1.8.12"
   }
 }
