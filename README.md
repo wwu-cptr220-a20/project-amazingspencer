@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+# Course Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository contains practice exercises for the _Web Application Development_ at WWU.
+It has been adapted from _Client-Side Web Development_ course at the UW iSchool.
 
-## Available Scripts
+The site can be viewed at <https://wwu-cptr220-a20.github.io/project-yourusername/>
 
-In the project directory, you can run:
+# Coronavirus Web Application
 
-### `npm start`
+The coronavirus has upended our lives and sent the world into a lockdown mode. The aim of this website will be to provide informative and helpful information on the coronavirus including number of cases, deaths, a map graphic, and reliable articles. The website presented currently explores this and other possible web applications that could be made in light of the coronavirus.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Stage-2 Improvements
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+For stage-2, CSS and more HTML has been added to improve the overall look and functionality of the site. In particular, several features have been added to increase the design complexity of the site.
 
-### `npm test`
+### New site features:
+* Parallax scrolling
+* Bootstrap navbar with custom styles
+* Extensive iconography using Font Awesome in navbar
+* Responsive containers using Bootstrap
+* Bootstrap card with styled contact button
+* Box shadows around images
+* Various styling adjustments (i.e. fonts, and background colors)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Stage-3 Improvements
 
-### `npm run build`
+Currently, Survey.js and Google Map Coronavirus API are not functional as the code was unable to pass the test suite with jest.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Survey.js
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To implement the survey, I utilized Survey.js, which allowed me to create and set up my survey at https://surveyjs.io/create-survey. Once set up, I included the necessary JavaScript and HTML code to make it appear within the website. This was a fantastic way of adding a survey to my site. I saved a ton of time and created something that looks good on both mobile and desktop.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Google Map Coronavirus API
+#### Implemented by Samuel Hernadez
 
-### `npm run eject`
+As part of the coronavirus web application, Samuel Hernadez was able to implement a Google Map API that shows the user coronavirus stats for each country. The user views this information by clicking on a blue dot that is found within the borders of the country. The idea of utilizing a map like this, is to give users of the site an idea of how other countries are doing with the coronavirus.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### World Case Numbers using Coronavirus API
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+For the page on cases, the same Coronavirus API was used to retrieve the data on the current world numbers for coronavirus around the world. The "Show Cases by Country" button provides a list of all the countries and their provinces along with a case count. The button can be used to toggle the list from visible and not visible.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Stage-4 Improvements
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+For this stage of the project, more improvements have been made and some issues with the last stage have been resolved.
 
-## Learn More
+### [Survey.js](https://surveyjs.io/create-survey) Updates
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Survey.js is now working appropriately and is passing the tests with jest. The survey has also been styled to look more in line with the rest of the site. A link has been added to Survey.js survey creator in the title.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Google Map Coronavirus API Updates
 
-### Code Splitting
+The map feature is undergoing bug fixing and being revised to pass the jest tests. It is still unable to pass the testing at this time. (10/28/2020) Samuel Hernadez and Hayden Tinker are actively working on this solution.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Last Updated Header Added Using [Lodash](https://lodash.com/)
 
-### Analyzing the Bundle Size
+To fulfill stage-4 requirements, Lodash has been used to implement a header that informs the user when the data was last updated. This will be helpful, as it will put confidence in users that the coronavirus data presented is up to date and accurate. Lodash functions used were "_.sample" and "_.truncate". A link has been included to the Lodash Library in the title.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Stage-5: Testing
 
-### Making a Progressive Web App
+For Stage-5, our team has added tests to ensure that our website is functioning as it should. We have added tests for all HTML files to check that content is present and styled appropriately. We have also added tests for some of our functionality, in particular, the "Cases" page.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Contributions:
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Our team's contributions are listed below:
+* Samuel Hernadez - Full map functionality ("Map" page), implemented Google Map along with Coronavirus API, and added test for this aspect.
+* Hayden Tinker   - Helped add tests for HTML and CSS content.
+* Samuel Nguyen   - Currently working on a user form and testing for this aspect.
+* Spencer Nielsen - Added case functionality to view case totals ("Case" page), added survey from Survey.js ("Survey" page), and added tests for HTML, CSS, and JS content.
