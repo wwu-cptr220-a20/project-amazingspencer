@@ -4,14 +4,14 @@ import React, { Component } from 'react';
 export default class Footer extends Component {
     render() {
         return (
-            <div className="footer">
-                <footer className="py-4 fixed-bottom">
+            <div className="container">
+                <footer className="py-4 mt-md-5 pt-md-5 border-top">
                     <div className="container">
-                        <div className="footer-copyright text-center">
-                            <p className="m-0 text-center text-white">
-                                Contact <a href="mailto:amazingspencer13@gmail.com">Spencer</a>.
+                        <div className="footer-copyright">
+                            <p className="m-0 text-center">
+                                Contact <a href="mailto:Spencer.Nielsen@wallawalla.edu">Spencer</a>.
                             Spencer Nielsen Copyright &copy; All rights reserved.
-                            </p>
+                        </p>
                         </div>
                     </div>
                 </footer>

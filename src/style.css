@@ -107,8 +107,6 @@ img {
 
 .card {
     margin-top: 1rem;
-    width: 50%;
-    display: flex;
     /* background-color: #eee;
     margin: .5rem;
     border-radius: 10px;
@@ -156,12 +154,11 @@ cite a {
 }
 
 footer {
-    position: absolute;
-    background-color: #0d47a1;
+    /* background-color: #0d47a1; */
 }
 
 footer a {
-    color: white;
+    /* color: white; */
 }
 
 .map {
