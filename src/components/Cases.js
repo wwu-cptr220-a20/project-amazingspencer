@@ -60,7 +60,7 @@ class WorldStats extends Component {
         return (
             <section>
                 <h1>Global Coronavirus Statistics</h1>
-                <p>Data from <cite><a style={{textDecoration: 'underline'}} href="https://github.com/Laeyoung/COVID-19-API">Laeyoung COVID-19-API</a></cite>.</p>
+                <p>Data from <cite><a style={{textDecoration: 'underline'}} href="https://github.com/Laeyoung/COVID-19-API" target="_blank" rel="noopener noreferrer">Laeyoung COVID-19-API</a></cite>.</p>
                 <LastUpdate />
                 <h3>Confirmed Cases: {new Intl.NumberFormat().format(this.state.confirmed)}</h3>
                 <h3>Confirmed Deaths: {new Intl.NumberFormat().format(this.state.deaths)}</h3>
