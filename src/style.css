@@ -106,37 +106,46 @@ img {
 }
 
 .card {
-    flex: 1 0 250px;
-    background-color: #eee;
+    margin-top: 1rem;
+    width: 50%;
+    display: flex;
+    /* background-color: #eee;
     margin: .5rem;
     border-radius: 10px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);   
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);    */
 }
 
-.card h2, .card p {
+.card-deck {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 10em;
+}
+
+/* .card h2, .card p {
     margin: 5px;
     text-align: center;
-}
+} */
 
-.card a {
+/* .card a {
     border: none;
     background-color: #0d47a1;
     border-radius: 0 0 10px 10px;
-}
+} */
 
-.card a {
+/* .card a {
     color: white;
-}
+} */
 
-.card a:hover, .card a:focus {
+/* .card a:hover, .card a:focus {
     background-color: #5472d3;
-}
+} */
 
-.card img {
+/* .card img {
     width: 11em;
     height: 12em;
 
-}
+} */
 
 #timeline ul {
     background-color: #eee;
