@@ -5,10 +5,10 @@ export default class Footer extends Component {
     render() {
         return (
             <div className="footer">
-                <footer class="py-5 fixed-bottom">
-                    <div class="container">
-                        <div class="footer-copyright text-center">
-                            <p class="m-0 text-center text-white">
+                <footer className="py-4 fixed-bottom">
+                    <div className="container">
+                        <div className="footer-copyright text-center">
+                            <p className="m-0 text-center text-white">
                                 Contact <a href="mailto:amazingspencer13@gmail.com">Spencer</a>.
                             Spencer Nielsen Copyright &copy; All rights reserved.
                             </p>

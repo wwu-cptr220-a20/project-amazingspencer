@@ -148,7 +148,6 @@ cite a {
 
 footer {
     position: absolute;
-    border-radius: 4px;
     background-color: #0d47a1;
 }
 
@@ -163,7 +162,6 @@ footer a {
 
 .caseButton {
     font-size: 31px;
-    margin-left: 5em;
     margin-bottom: 1em;
     color: white;
     background-color: #0d47a1;
@@ -191,4 +189,19 @@ footer a {
 #case-count h2 {
     font-weight: 800;
     margin-bottom: 10px;
+}
+
+#spinner {
+    margin-top: 5rem;
+    color: #5472d3;
+    font-size: 60px;
+}
+
+#countryButton {
+    margin-bottom: 5em;
+}
+
+#tableHead {
+    color: white;
+    background-color: #0d47a1
 }

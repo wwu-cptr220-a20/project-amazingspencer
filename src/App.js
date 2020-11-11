@@ -13,6 +13,7 @@ export class App extends Component {
           <Switch>
             <Route path='/home' exact component={Home} />
             <Route path='/cases' exact component={Cases} />
+            <Route path='/map' exact component={Map} />
             <Route path='/survey' exact component={Survey} />
             <Route path='/about' exact component={About} />
           </Switch>
