@@ -166,6 +166,7 @@ class CasesByCountry extends Component {
                 <div id="countryButton">
                     <button className="btn-primary caseButton" onClick={() => this.handleClick()}>Toggle Cases by Country</button>
                     <table id="countryTable" className="table table-bordered table-striped" style={{ display: this.state.visible === true ? 'table' : 'none' }}>
+                        <caption>List of Coronavirus cases by country.</caption>
                         <TableHeader cols={['Country', 'Cases']} />
                         <tbody>
                             {countries}
