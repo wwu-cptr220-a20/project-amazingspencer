@@ -5,7 +5,7 @@ import { Navigation, Footer, Home, Cases, SurveyReact, About } from './component
 export class App extends Component {
   render() {
     return (
-      <Router>
+      <Router basename="/project-amazingspencer">
         <Navigation />
         <Switch>
           <Route path='/home' exact component={Home} />
