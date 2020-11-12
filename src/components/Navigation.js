@@ -13,7 +13,7 @@ class Navigation extends Component {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav mx-auto nav">
-                            <li className="nav-item active"><Link className="nav-link" to="/home"><i
+                            <li className="nav-item active"><Link className="nav-link" to="/"><i
                                 className="fa fa-fw fa-home">&nbsp;Home</i></Link></li>
                             <li className="nav-item"><Link className="nav-link" to="/cases"><i
                                 className="fas fa-syringe">&nbsp;Cases</i></Link></li>
