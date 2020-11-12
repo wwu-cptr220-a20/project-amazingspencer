@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Map, GoogleApiWrapper, InfoWindow, Marker } from 'google-maps-react';
+import Navigation from './Navigation';
 import Footer from './Footer';
+
 
 const mapStyles = {
     minZoom: 3,
@@ -54,8 +56,17 @@ export class Map extends Component {
             />
         );
 
-       // <covidData />
-       //marker
+        <Marker
+
+            onClick={this.onMarkerClick}
+            name={'country region '}
+            //add infowindow with API data
+
+        />
+
+
+        // <covidData />
+        //marker
 
     }
 
@@ -89,11 +100,15 @@ class covidData {
     }
 
 
-    render() { }
+    render() {
+
+    }
 
 }
 
-class marker {
+class Marker {
+
+
     render() {
         state = {
             showingInfoWindow: false,  // Hides or shows the InfoWindow
@@ -117,4 +132,5 @@ class marker {
             });
         }
     };
+
 }
