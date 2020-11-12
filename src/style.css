@@ -49,46 +49,14 @@ body {
     border: none;
 }
 
-/* .parallax-section {
-    background-image: url('../img/coronavirus.png');
-    min-height: 500px;
-    width: 100%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-} */
+.react-parallax-background-children {
+    width: 50%;
+}
 
 .sub-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-}
-
-.parallax-section > h1 {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    font-weight: 900;
-    color: white;
-    background-color: #0d47a1;
-    border-radius: 7px;
-}
-
-.parallax-section > h2 {
-    margin: 0;
-    position: absolute;
-    top: 60%;
-    left: 40%;
-    margin-right: -50%;
-    transform: translate(0, -50%);
-    color: white;
-    background-color: #0d47a1;
-    border-radius: 7px;
 }
 
 h1 {
@@ -199,7 +167,7 @@ cite a {
     margin-bottom: 5em;
 }
 
-#tableHead {
+#tableHead, #tableHead2 {
     color: white;
     background-color: #0d47a1
 }
