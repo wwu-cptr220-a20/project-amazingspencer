@@ -8,7 +8,7 @@ export class App extends Component {
       <Router basename="/project-amazingspencer">
         <Navigation />
         <Switch>
-          <Route path='/home' exact component={Home} />
+          <Route path='/' exact component={Home} />
           <Route path='/cases' exact component={Cases} />
           <Route path='/map' exact component={Map} />
           <Route path='/survey' exact component={SurveyReact} />

@@ -69,7 +69,7 @@ Our team's contributions are listed below:
 
 ## Stage-6: Complete Site Overhaul with [React](https://reactjs.org/)!
 
-For Stage-6, our team's tasks was to rebuild our site with the React JavaScript library. Here are the improvements:
+For Stage-6, our team's task was to rebuild our site with the React JavaScript library. Here are the improvements:
 
 ### Improvements
 
@@ -80,7 +80,7 @@ One issue that came up with this, however, was Github Pages. Luckily, these awes
 
 ### Improved About page
 
-In previous stages, our about page was looking very lackluster and I (Spencer Nielsen) was the only one on it. However, this is all changed with much improved styling updates and the rest of the team has been added using their images from the ASWWU Mask!
+In previous stages, our About page was looking very lackluster and I (Spencer Nielsen) was the only one on it. However, this is all changed with much improved styling updates and the rest of the team has been added using their images from ASWWU's Mask!
 
 ### Other Styling Changes
 
