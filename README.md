@@ -66,3 +66,22 @@ Our team's contributions are listed below:
 * Hayden Tinker   - Helped add tests for HTML and CSS content.
 * Samuel Nguyen   - Currently working on a user form and testing for this aspect.
 * Spencer Nielsen - Added case functionality to view case totals ("Case" page), added survey from Survey.js ("Survey" page), and added tests for HTML, CSS, and JS content.
+
+## Stage-6: Complete Site Overhaul with [React](https://reactjs.org/)!
+
+For Stage-6, our team's tasks was to rebuild our site with the React JavaScript library. Here are the improvements:
+
+### Improvements
+
+#### Client-Side Routing
+
+To enable our site to behave like a normal website, client-side routing was added.
+One issue that came up with this, however, was Github Pages. Luckily, these awesome [guys](https://github.com/rafgraph/spa-github-pages) provided a way for us to utilize client-side routing and Github Pages. The trick they used, was to force Github Pages to keep retrieving the same resource (index.html) everytime a new component was clicked on. This way when you click on a nav tab, Github attempts to access what is there, finds a 404.html file (part of the trick), then gets its url modified to be what the component is expecting. Thus, the component appears. I am very thankful for this workaround and ease of use.
+
+### Improved About page
+
+In previous stages, our about page was looking very lackluster and I (Spencer Nielsen) was the only one on it. However, this is all changed with much improved styling updates and the rest of the team has been added using their images from the ASWWU Mask!
+
+### Other Styling Changes
+
+In addition to revamping the About page, the Cases page gained a brand new table that renders when you click on the button! A table was also added to the Home page for the timeline.
