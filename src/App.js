@@ -2,6 +2,14 @@ import { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { Navigation, Footer, Home, Cases, SurveyReact, About } from './components';
 
+const React = require('react');
+const ReactDOM = require('react-dom');
+
+if (process.env.NODE_ENV !== 'production') {
+  const axe = require('@axe-core/react');
+  axe(React, ReactDOM, 1000);
+}
+
 export class App extends Component {
   render() {
     return (

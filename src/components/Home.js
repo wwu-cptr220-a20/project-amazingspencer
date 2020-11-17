@@ -27,7 +27,7 @@ export default class Home extends Component {
                             <section id="overview">
                                 <h2 className="mt-5">Overview</h2>
 
-                                <p>Image Above: <a href="https://www.dreamstime.com/"><cite>Copyright: (c) Wektorygrafika | Dreamstime.com</cite></a></p>
+                                <p>Image Above: <cite><a href="https://www.dreamstime.com/">Copyright: (c) Wektorygrafika | Dreamstime.com</a></cite></p>
                                 <p>
                                     Around February 2020, rumors began to spread of a certain virus that could have
                                     devastading consequences. In March 2020, the coronavirus made its debut and had

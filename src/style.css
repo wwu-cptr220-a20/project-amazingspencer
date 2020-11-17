@@ -128,7 +128,7 @@ img {
     background-color: #eee;
 }
 
-cite a {
+cite a, .footer-copyright a {
     color: black;
 }
 
