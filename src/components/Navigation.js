@@ -12,17 +12,17 @@ class Navigation extends Component {
                         <span className="navbar-toggler-icon"><i className="fas fa-bars hamburger"></i></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarNav">
-                        <ul className="navbar-nav mx-auto nav">
+                        <ul className="navbar-nav mx-auto nav d-flex flex-nowrap">
                             <li className="nav-item active"><Link className="nav-link" to="/"><i
-                                className="fa fa-fw fa-home">&nbsp;Home</i></Link></li>
+                                className="fa fa-fw fa-home"></i>&nbsp;Home</Link></li>
                             <li className="nav-item"><Link className="nav-link" to="/cases"><i
-                                className="fas fa-syringe">&nbsp;Cases</i></Link></li>
+                                className="fas fa-syringe"></i>&nbsp;Cases</Link></li>
                             <li className="nav-item"><Link className="nav-link" to="/map"><i
-                                className="fas fa-map-marked-alt">&nbsp;Map</i></Link></li>
+                                className="fas fa-map-marked-alt"></i>&nbsp;Map</Link></li>
                             <li className="nav-item"><Link className="nav-link" to="/survey"><i
-                                className="fas fa-poll">&nbsp;Survey</i></Link></li>
+                                className="fas fa-poll"></i>&nbsp;Survey</Link></li>
                             <li className="nav-item"><Link className="nav-link" to="/about"><i
-                                className="fas fa-ellipsis-h">&nbsp;About</i></Link></li>
+                                className="fas fa-ellipsis-h"></i>&nbsp;About</Link></li>
                         </ul>
                     </div>
                 </nav>
