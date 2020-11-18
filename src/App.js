@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import { Navigation, Footer, Home, Cases, SurveyReact, About } from './components';
+import { Navigation, Footer, Home, Cases, SurveyQuestion, About } from './components';
 
 const React = require('react');
 const ReactDOM = require('react-dom');
@@ -19,7 +19,7 @@ export class App extends Component {
           <Route path='/' exact component={Home} />
           <Route path='/cases' exact component={Cases} />
           <Route path='/map' exact component={Map} />
-          <Route path='/survey' exact component={SurveyReact} />
+          <Route path='/survey' exact component={SurveyQuestion} />
           <Route path='/about' exact component={About} />
         </Switch>
         <Footer />

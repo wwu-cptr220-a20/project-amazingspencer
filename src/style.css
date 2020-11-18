@@ -128,13 +128,23 @@ img {
     background-color: #eee;
 }
 
-cite a, .footer-copyright a {
+cite a, .footer-copyright a, .resource a {
     color: black;
+    text-decoration: underline;
 }
 
 .map {
     width: 100vw;
     height: 100vh;
+}
+
+.button {
+    margin-bottom: 20px;
+}
+
+#resetSurvey {
+    color: white;
+    background-color: #0d47a1;
 }
 
 .caseButton {

@@ -5,4 +5,4 @@ export { default as Footer } from "./Footer";
 export { default as Home } from "./Home";
 export { default as Cases } from "./Cases";
 export { default as About } from "./About";
-export { default as SurveyReact } from "./Survey";
+export { default as SurveyQuestion } from "./Survey";
