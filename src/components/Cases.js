@@ -56,7 +56,7 @@ class WorldStats extends Component {
             return <div><h1>There was a problem with your request.</h1></div>;
         }
         if (isLoading) {
-            return <div className="text-center" style={{marginTop: 5}}><i id="spinner" class="fas fa-spin fa-circle-notch"></i></div>;
+            return <div className="text-center" style={{marginTop: 5}}><i id="spinner" className="fas fa-spin fa-circle-notch"></i></div>;
         }
         return (
             <section>
@@ -110,10 +110,10 @@ class LastUpdate extends Component {
     render() {
         let { error, isLoading } = this.state;
         if (error) {
-            return <div><h2>Error! There was a problem with your request.</h2></div>;
+            return <div><h2>There was a problem with your request.</h2></div>;
         }
         if (isLoading) {
-            return <div className="text-center" style={{marginTop: 5}}><i id="spinner" class="fas fa-spin fa-circle-notch"></i></div>;
+            return <div className="text-center" style={{marginTop: 5}}><i id="spinner" className="fas fa-spin fa-circle-notch"></i></div>;
         }
         return <h2>Last update: {this.state.lastUpdate}</h2>
     }
@@ -165,7 +165,7 @@ class CasesByCountry extends Component {
             return <div><h1>There was a problem with your request.</h1></div>;
         }
         if (isLoading) {
-            return <div className="text-center" style={{marginTop: 5}}><i id="spinner" class="fas fa-spin fa-circle-notch"></i></div>;
+            return <div className="text-center" style={{marginTop: 5}}><i id="spinner" className="fas fa-spin fa-circle-notch"></i></div>;
         }
 
         let countries = this.state.countries.map((country) => {
