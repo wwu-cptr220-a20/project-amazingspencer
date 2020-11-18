@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { Navigation, Footer, Home, Cases, SurveyQuestion, About } from './components';
+import "./style.css";
 
 const React = require('react');
 const ReactDOM = require('react-dom');
