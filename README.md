@@ -1,11 +1,6 @@
-# Course Project
+# CovidHub
 
-This repository contains practice exercises for the _Web Application Development_ at WWU.
-It has been adapted from _Client-Side Web Development_ course at the UW iSchool.
-
-The site can be viewed at <https://wwu-cptr220-a20.github.io/project-yourusername/>
-
-# Coronavirus Web Application
+Welcome to CovidHub! Your personal hub for all things COVID-19!
 
 The coronavirus has upended our lives and sent the world into a lockdown mode. The aim of this website will be to provide informative and helpful information on the coronavirus including number of cases, deaths, a map graphic, and reliable articles. The website presented currently explores this and other possible web applications that could be made in light of the coronavirus.
 
@@ -85,3 +80,11 @@ In previous stages, our About page was looking very lackluster and I (Spencer Ni
 ### Other Styling Changes
 
 In addition to revamping the About page, the Cases page gained a brand new table that renders when you click on the button! A table was also added to the Home page for the timeline.
+
+## Stage-7: Final Website - CovidHub
+
+The site has been updated and rehauled even further. The Map page should now be working as intended and other pages have also gotten some upgrades. The Survey page has been rebuilt from the ground-up and now uses all original code in conjuction with client-side routing and nested routes. In addition, many other styling changes have been made.
+
+### Survey Page Specifics:
+
+The Survey page was rebuilt from the ground up. This was in large part due to accessibility requirements and now fits in with the overall theme of the site. Nested routes are used to direct the user to specific resources that can help them based on how they are feeling.
