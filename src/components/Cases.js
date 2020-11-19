@@ -30,6 +30,7 @@ class WorldStats extends Component {
     }
 
     componentDidMount() {
+        this.setState({ isLoading: true })
         fetch('https://wuhan-coronavirus-api.laeyoung.endpoint.ainize.ai/jhu-edu/brief')
             .then((response) => {
                 if (response.status >= 400) {
@@ -55,7 +56,7 @@ class WorldStats extends Component {
             return <div><h1>There was a problem with your request.</h1></div>;
         }
         if (isLoading) {
-            return <div className="text-center" style={{marginTop: 5}}><i id="spinner" class="fas fa-spin fa-circle-notch"></i></div>;
+            return <div className="text-center" style={{marginTop: 5}}><i id="spinner" className="fas fa-spin fa-circle-notch"></i></div>;
         }
         return (
             <section>
@@ -77,11 +78,13 @@ class LastUpdate extends Component {
         super(props)
         this.state = {
             error: null,
+            isLoading: false,
             lastUpdate: ''
         }
     }
 
     componentDidMount() {
+        this.setState({ isLoading: true })
         fetch('https://wuhan-coronavirus-api.laeyoung.endpoint.ainize.ai/jhu-edu/latest')
             .then((response) => {
                 if (response.status >= 400) {
@@ -93,20 +96,24 @@ class LastUpdate extends Component {
                 // Use of Date class from https://css-tricks.com/how-to-convert-a-date-string-into-a-human-readable-format/
                 const options = { year: "numeric", month: "long", day: "numeric" }
                 let date = new Date(data[0].lastupdate).toLocaleDateString(undefined, options)
-                this.setState({ lastUpdate: date })
+                this.setState({ isLoading: false, lastUpdate: date })
             },
             // Error handling design inspired by https://medium.com/@shivamkumar19/react-fetch-data-e19c37736950
             error => {
                 this.setState({
                     error,
+                    isLoading: false
                 })
             });
     }
 
     render() {
-        let { error } = this.state;
+        let { error, isLoading } = this.state;
         if (error) {
-            return <div><h2>Error! There was a problem with your request.</h2></div>;
+            return <div><h2>There was a problem with your request.</h2></div>;
+        }
+        if (isLoading) {
+            return <div className="text-center" style={{marginTop: 5}}><i id="spinner" className="fas fa-spin fa-circle-notch"></i></div>;
         }
         return <h2>Last update: {this.state.lastUpdate}</h2>
     }
@@ -125,6 +132,7 @@ class CasesByCountry extends Component {
     }
 
     componentDidMount() {
+        this.setState({ isLoading: true })
         fetch('https://wuhan-coronavirus-api.laeyoung.endpoint.ainize.ai/jhu-edu/latest?onlyCountries=true')
             .then((response) => {
                 if (response.status >= 400) {
@@ -133,12 +141,13 @@ class CasesByCountry extends Component {
                 return response.json()
             })
             .then((data) => {
-                this.setState({ countries: data })
+                this.setState({ isLoading: false, countries: data })
             },
             // Error handling design inspired by https://medium.com/@shivamkumar19/react-fetch-data-e19c37736950
             error => {
                 this.setState({
                     error,
+                    isLoading: false
                 })
             });
     }
@@ -151,9 +160,12 @@ class CasesByCountry extends Component {
     }
 
     render() {
-        let { error } = this.state;
+        let { error, isLoading } = this.state;
         if (error) {
             return <div><h1>There was a problem with your request.</h1></div>;
+        }
+        if (isLoading) {
+            return <div className="text-center" style={{marginTop: 5}}><i id="spinner" className="fas fa-spin fa-circle-notch"></i></div>;
         }
 
         let countries = this.state.countries.map((country) => {

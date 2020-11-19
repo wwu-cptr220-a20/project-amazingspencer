@@ -7,6 +7,9 @@ class Navigation extends Component {
         return (
             <div className="navigation">
                 <nav className="navbar fixed-top navbar-expand-md">
+                    <div id="skip">
+                        <a href="#root">Skip to Content</a>
+                    </div>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"><i className="fas fa-bars hamburger"></i></span>

@@ -60,6 +60,21 @@ body {
     border: none;
 }
 
+.parallax-section {
+    background-image: url('img/coronavirus.png');
+    min-height: 500px;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.parallax-section h1, .parallax-section h2 {
+    color: white;
+}
+
 .react-parallax-background-children {
     width: 50%;
 }
@@ -72,7 +87,7 @@ body {
 
 h1 {
     font-weight: 900;
-    margin-top: 5rem;
+    padding-top: 5rem;
 }
 
 img {
@@ -128,13 +143,23 @@ img {
     background-color: #eee;
 }
 
-cite a {
+cite a, .footer-copyright a, .resource a {
     color: black;
+    text-decoration: underline;
 }
 
 .map {
     width: 100vw;
     height: 100vh;
+}
+
+.button {
+    margin-bottom: 20px;
+}
+
+#resetSurvey {
+    color: white;
+    background-color: #0d47a1;
 }
 
 .caseButton {

@@ -1,6 +1,19 @@
 import { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+<<<<<<< HEAD
 import { Navigation, Footer, Home, Cases, Map, SurveyReact, About } from './components';
+=======
+import { Navigation, Footer, Home, Cases, SurveyQuestion, About } from './components';
+import "./style.css";
+
+const React = require('react');
+const ReactDOM = require('react-dom');
+
+if (process.env.NODE_ENV !== 'production') {
+  const axe = require('@axe-core/react');
+  axe(React, ReactDOM, 1000);
+}
+>>>>>>> 01faa8772d7056641927b267fecb7fe64c5ae366
 
 export class App extends Component {
   render() {
@@ -11,7 +24,7 @@ export class App extends Component {
           <Route path='/' exact component={Home} />
           <Route path='/cases' exact component={Cases} />
           <Route path='/map' exact component={Map} />
-          <Route path='/survey' exact component={SurveyReact} />
+          <Route path='/survey' exact component={SurveyQuestion} />
           <Route path='/about' exact component={About} />
         </Switch>
         <Footer />
