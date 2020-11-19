@@ -1,48 +1,38 @@
-import React, { Component } from "react";
-import { GoogleMap, withScriptjs, withGoogleMap} from "react-google-map";
+import React, { Component } from 'react';
+import GoogleMapReact from 'google-maps-react';
 
-const mapStyles = {
-    minZoom: 3,
-    maxZoom: 8,
+const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
-    width: '100%',
-    height: '100%',
+class Map extends Component {
+    static defaultProps = {
+        center: {
+            lat: 59.95,
+            lng: 30.33
+        },
+        zoom: 11
+    };
 
-
-    restriction: {
-        latLngBounds: {
-            north: 1,
-            south: -1,
-            east: -5,
-            west: -5,
-        }
-    },
-
-    disableDefaultUI: true
-};
-
-function MyMap() {
-    return (
-        <GoogleMap
-            defaultZoom={3}
-            defaultCenter={{ lat: 0, lng: 0 }}
-        />
-
-
-    )
-};
-const WrappedMap = withScriptjs(withGoogleMap(MyMap));
-export default class Map extends Component {
     render() {
-        return (<div style={mapStyles}>
-
-<WrappedMap
-  googleMapURL="https://maps.googleapis.com/maps/api/js?cv=3.exp&libraries=geometry,drawing,places&key=AIzaSyBbPk_NONuQ7r1buVhCf_R4c32j_E660x"
-  loadingElement={<div style={{ height: `100%` }} />}
-  containerElement={<div style={{ height: `400px` }} />}
-  mapElement={<div style={{ height: `100%` }} />}
-/>
-            </div>
-            );
+        return (
+            // Important! Always set the container height explicitly
+            <div style={{ height: '100vh', width: '100%' }}>
+                <GoogleMapReact
+                    bootstrapURLKeys={{ key: 'AIzaSyBbPk_NONuQ7r1buVhCf_R4c32j_E660xc' }}
+                    defaultCenter={{
+                        lat: 59.95,
+                        lng: 30.33
+                    }}
+                    defaultZoom={{zoom: 11}}
+                >
+                <AnyReactComponent
+                    lat={59.955413}
+                    lng={30.337844}
+                    text="My Marker"
+                />
+                </GoogleMapReact>
+            </div >
+        );
     }
-};
+}
+
+export default Map;

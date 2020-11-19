@@ -5,9 +5,9 @@
   "homepage": "https://wwu-cptr220-a20.github.io/project-amazingspencer",
   "dependencies": {
     "gh-pages": "^3.1.0",
+    "google-maps-react": "^2.0.6",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-google-map": "^9.4.5",
     "react-parallax": "^3.1.2",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.0",
