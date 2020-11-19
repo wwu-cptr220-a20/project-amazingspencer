@@ -143,7 +143,7 @@ img {
     background-color: #eee;
 }
 
-cite a, .footer-copyright a, .resource a {
+cite a, .resource a {
     color: black;
     text-decoration: underline;
 }
@@ -206,6 +206,10 @@ cite a, .footer-copyright a, .resource a {
 #tableHead, #tableHead2 {
     color: white;
     background-color: #0d47a1
+}
+
+footer i {
+    color: red;
 }
 /*
 @media (min-width: 34em) {

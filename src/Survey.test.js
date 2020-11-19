@@ -31,6 +31,6 @@ describe("Content and HTML is valid.", () => {
         // Expect heading to be present.
         expect(container.querySelector("h1").textContent).toBe("Coronavirus Personal Survey");
         // Expect instructions are present.
-        expect(container.querySelector("p").textContent).toBe("Welcome! To begin, click on \"Begin Survey!,\" to restart click the button again.")
+        expect(container.querySelector("p").textContent).toBe("Welcome! To begin, click on \"Begin Survey!,\" to restart click the button again. This survey is intended to provide resources for you based on how you feel.")
     })
 })

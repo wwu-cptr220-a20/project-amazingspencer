@@ -25,8 +25,8 @@ describe("Content and HTML is valid.", () => {
       render(<Header />, container);
     });
     // Expect correct headings to appear.
-    expect(container.querySelector("h1").textContent).toBe("Coronavirus (COVID-19)");
-    expect(container.querySelector("h2").textContent).toBe("The pandemic of our time.");
+    expect(container.querySelector("h1").textContent).toBe("Welcome to CovidHub!");
+    expect(container.querySelector("h2").textContent).toBe("Your personal hub for all things COVID-19.");
   })
 
   test("Overview section is present.", () => {

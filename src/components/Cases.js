@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import 'whatwg-fetch';
 
 // Top class for Cases page calls on child components
 export default class Cases extends Component {
