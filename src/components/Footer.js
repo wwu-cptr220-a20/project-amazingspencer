@@ -9,8 +9,7 @@ export default class Footer extends Component {
                     <div className="container">
                         <div className="footer-copyright">
                             <p className="m-0 text-center">
-                                Contact <a href="mailto:Spencer.Nielsen@wallawalla.edu">Spencer</a>.
-                            Spencer Nielsen Copyright &copy; All rights reserved.
+                                Made with <i className="fas fa-heart"></i> by the CovidHub Team. Copyright &copy; All rights reserved.
                         </p>
                         </div>
                     </div>

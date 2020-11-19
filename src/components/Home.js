@@ -37,8 +37,8 @@ export function Header() {
             <div className="parallax-section">
                 <div className="container">
 
-                    <h1>Coronavirus (COVID-19)</h1>
-                    <h2>The pandemic of our time.</h2>
+                    <h1>Welcome to CovidHub!</h1>
+                    <h2>Your personal hub for all things COVID-19.</h2>
                 </div>
             </div>
         </header>
@@ -68,22 +68,11 @@ export function Overview() {
                 Currently, the <cite><a href="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html">
                     CDC recommends</a></cite> that you wash your hands often, avoid close contact, cover your mouth and nose with a
             mask when around others, cover coughs and sneezes, clean and disinfect, and monitor your health daily to prevent
-            contracting the coronavirus.
-            </p>
-
-            <p>
-                <cite><a href="https://coronavirus.jhu.edu/map.html">John Hopkins University</a></cite> provides a global map of
+            contracting the coronavirus. <cite><a href="https://coronavirus.jhu.edu/map.html">John Hopkins University</a></cite> provides a global map of
             coronavirus hotspots and known locations. This site also includes number of cases, number of deaths, and trends
             for the virus.
             </p>
 
-            <p>
-                I believe that there is a real need for web applications for the coronavirus. People want to be able to visit a
-                site that will inform and provide updated statistics on the extent of the coronavirus. People want to be
-                able to quickly and easily locate information related to the coronavirus. People will also want to see how
-                their local governments are handling this virus and the web app could provide links to local government
-                sites.
-            </p>
             <figure>
                 <img src={covidImage} alt="Spray-paint of a mask and the words COVID-19." />
                 <figcaption>Photo by <cite><a href="https://unsplash.com/@adamsky1973">Adam Nieścioruk</a></cite>.</figcaption>

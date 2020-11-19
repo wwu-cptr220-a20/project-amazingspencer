@@ -25,8 +25,8 @@ describe("Content and HTML is valid.", () => {
       render(<Header />, container);
     });
     // Expect correct headings to appear.
-    expect(container.querySelector("h1").textContent).toBe("Coronavirus (COVID-19)");
-    expect(container.querySelector("h2").textContent).toBe("The pandemic of our time.");
+    expect(container.querySelector("h1").textContent).toBe("Welcome to CovidHub!");
+    expect(container.querySelector("h2").textContent).toBe("Your personal hub for all things COVID-19.");
   })
 
   test("Overview section is present.", () => {
@@ -42,7 +42,7 @@ describe("Content and HTML is valid.", () => {
   test("Origin section is present.", () => {
     act(() => {
       render(<Origin />, container);
-    })
+    });
     // Expect correct heading to appear.
     expect(container.querySelector("h2").textContent).toBe("Origin");
   })
@@ -50,7 +50,7 @@ describe("Content and HTML is valid.", () => {
   test("Symptoms section is present.", () => {
     act(() => {
       render(<Symptoms />, container);
-    })
+    });
     // Expect correct heading to appear.
     expect(container.querySelector("h2").textContent).toBe("Symptoms");
   })
@@ -58,7 +58,7 @@ describe("Content and HTML is valid.", () => {
   test("Care section is present.", () => {
     act(() => {
       render(<Care />, container);
-    })
+    });
     // Expect correct heading to appear.
     expect(container.querySelector("h2").textContent).toBe("Taking Care of Yourself");
     // Expect image to contain the correct image.
@@ -68,7 +68,7 @@ describe("Content and HTML is valid.", () => {
   test("Timeline section is present.", () => {
     act(() => {
       render(<Timeline />, container);
-    })
+    });
     // Expect correct heading to appear.
     expect(container.querySelector("h2").textContent).toBe("Timeline of the Coronavirus");
     // Expect image to contain the correct image.

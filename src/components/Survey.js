@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Link, Switch, Route, useRouteMatch } from "rea
 
 export default function SurveyQuestion() {
     return (
-        <Router basename="project-amazingspencer/survey/">
+        <Router>
             <header>
                 <div className="container">
                     <h1>Coronavirus Personal Survey</h1>
@@ -12,13 +12,13 @@ export default function SurveyQuestion() {
             </header>
             <main>
                 <div className="container">
+                    <p>Welcome! To begin, click on "Begin Survey!," to restart click the button again. This survey is intended to provide resources for you based on how you feel.</p>
                     <Switch>
                         <Route path="/SQ1">
                             <SurveyQuestionOne />
                         </Route>
                     </Switch>
                     <Link to="/SQ1" className="btn" id="resetSurvey">Begin Survey!</Link>
-                    <p>Welcome! To begin, click on "Begin Survey!," to restart click the button again.</p>
                 </div>
             </main>
         </Router>

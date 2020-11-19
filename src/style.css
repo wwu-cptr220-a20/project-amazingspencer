@@ -1,3 +1,4 @@
+/* General Styles */
 *{
     box-sizing: border-box;
 }
@@ -14,16 +15,11 @@ body {
 
 }
 
-.navbar-brand {
-    color: white;
-}
-
 .nav a {
     text-align: center;
     margin-right: 5rem;
     font-size: 18px;
     color: white;
-
 }
 
 .nav a:hover {
@@ -35,13 +31,11 @@ body {
     transition: all 0.1s ease-in;
 }
 
-/* Icon style */
 .hamburger {
     font-size: 30px;
     color: #fff;
 }
 
-/* Skip Link */
 #skip a {
     position: absolute;
     left: -10000px;
@@ -60,34 +54,42 @@ body {
     border: none;
 }
 
-.parallax-section {
-    background-image: url('img/coronavirus.png');
-    min-height: 500px;
-    width: 100%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-}
-
-.parallax-section h1, .parallax-section h2 {
-    color: white;
-}
-
-.react-parallax-background-children {
-    width: 50%;
-}
-
-.sub-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
 h1 {
     font-weight: 900;
     padding-top: 5rem;
+}
+
+cite a, .resource a {
+    color: black;
+    text-decoration: underline;
+}
+
+
+footer i {
+    color: red;
+}
+
+/* Home page Styles */
+
+.parallax-section {
+    background-attachment: scroll;
+}
+
+@media (min-width: 1000px) {
+    .parallax-section {
+        background-image: url('img/coronavirus.png');
+        min-height: 500px;
+        width: 100%;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;    
+    }
+
+    .parallax-section h1, .parallax-section h2 {
+        color: white;
+    }    
 }
 
 img {
@@ -99,13 +101,15 @@ img {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
 }
 
+/* About page Styles */
+
 .card {
     margin-top: 1rem;
-    /* background-color: #eee;
-    margin: .5rem;
-    border-radius: 10px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);    */
 }
+
+.card a:hover {
+    background-color: #0d47a1;
+} 
 
 .card-deck {
     display: flex;
@@ -114,44 +118,14 @@ img {
     margin-bottom: 10em;
 }
 
-/* .card h2, .card p {
-    margin: 5px;
-    text-align: center;
-} */
-
-/* .card a {
-    border: none;
-    background-color: #0d47a1;
-    border-radius: 0 0 10px 10px;
-} */
-
-/* .card a {
-    color: white;
-} */
-
- .card a:hover {
-    background-color: #0d47a1;
-} 
-
-/* .card img {
-    width: 11em;
-    height: 12em;
-
-} */
-
-#timeline ul {
-    background-color: #eee;
-}
-
-cite a, .footer-copyright a, .resource a {
-    color: black;
-    text-decoration: underline;
-}
+/* Map page Styles */
 
 .map {
     width: 100vw;
     height: 100vh;
 }
+
+/* Survey page Styles */
 
 .button {
     margin-bottom: 20px;
@@ -161,6 +135,8 @@ cite a, .footer-copyright a, .resource a {
     color: white;
     background-color: #0d47a1;
 }
+
+/* Cases page Styles */
 
 .caseButton {
     font-size: 31px;
@@ -207,6 +183,7 @@ cite a, .footer-copyright a, .resource a {
     color: white;
     background-color: #0d47a1
 }
+
 /*
 @media (min-width: 34em) {
     .card-column{
