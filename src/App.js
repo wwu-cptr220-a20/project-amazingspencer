@@ -14,7 +14,7 @@ if (process.env.NODE_ENV !== 'production') {
 export class App extends Component {
   render() {
     return (
-      <Router basename="/covidhub">
+      <Router basename="/project-amazingspencer">
         <Navigation />
         <Switch>
           <Route path='/' exact component={Home} />
