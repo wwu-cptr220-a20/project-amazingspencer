@@ -9,7 +9,7 @@ export default class Footer extends Component {
                     <div className="container">
                         <div className="footer-copyright">
                             <p className="m-0 text-center">
-                                Made with <i class="fas fa-heart"></i> by the CovidHub Team. Copyright &copy; All rights reserved.
+                                Made with <i className="fas fa-heart"></i> by the CovidHub Team. Copyright &copy; All rights reserved.
                         </p>
                         </div>
                     </div>
