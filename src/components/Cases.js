@@ -17,7 +17,7 @@ export default class Cases extends Component {
 
 // Child component to Cases class, renders Global stats,
 // also calls its own child components
-class WorldStats extends Component {
+export class WorldStats extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -41,13 +41,13 @@ class WorldStats extends Component {
             .then((data) => {
                 this.setState({ isLoading: false, confirmed: data.confirmed, deaths: data.deaths, recoveries: data.recovered })
             },
-            // Error handling design inspired by https://medium.com/@shivamkumar19/react-fetch-data-e19c37736950
-            error => {
-                this.setState({
-                    error,
-                    isLoading: false
-                })
-            });
+                // Error handling design inspired by https://medium.com/@shivamkumar19/react-fetch-data-e19c37736950
+                error => {
+                    this.setState({
+                        error,
+                        isLoading: false
+                    })
+                });
     }
 
     render() {
@@ -56,12 +56,12 @@ class WorldStats extends Component {
             return <div><h1>There was a problem with your request.</h1></div>;
         }
         if (isLoading) {
-            return <div className="text-center" style={{marginTop: 5}}><i id="spinner" className="fas fa-spin fa-circle-notch"></i></div>;
+            return <div className="text-center" style={{ marginTop: 5 }}><i id="spinner" className="fas fa-spin fa-circle-notch"></i></div>;
         }
         return (
             <section>
                 <h1>Global Coronavirus Statistics</h1>
-                <p>Data from <cite><a style={{textDecoration: 'underline'}} href="https://github.com/Laeyoung/COVID-19-API" target="_blank" rel="noopener noreferrer">Laeyoung COVID-19-API</a></cite>.</p>
+                <p>Data from <cite><a style={{ textDecoration: 'underline' }} href="https://github.com/Laeyoung/COVID-19-API" target="_blank" rel="noopener noreferrer">Laeyoung COVID-19-API</a></cite>.</p>
                 <LastUpdate />
                 <h3>Confirmed Cases: {new Intl.NumberFormat().format(this.state.confirmed)}</h3>
                 <h3>Confirmed Deaths: {new Intl.NumberFormat().format(this.state.deaths)}</h3>
@@ -73,7 +73,10 @@ class WorldStats extends Component {
 
 // Child component to WorldStats, renders the date the API 
 // was last updated
-class LastUpdate extends Component {
+export class LastUpdate extends Component {
+    // Use of _isMounted to remove mounting error from https://stackoverflow.com/questions/53949393/cant-perform-a-react-state-update-on-an-unmounted-component
+    _isMounted = false;
+
     constructor(props) {
         super(props)
         this.state = {
@@ -84,6 +87,7 @@ class LastUpdate extends Component {
     }
 
     componentDidMount() {
+        this._isMounted = true;
         this.setState({ isLoading: true })
         fetch('https://wuhan-coronavirus-api.laeyoung.endpoint.ainize.ai/jhu-edu/latest')
             .then((response) => {
@@ -93,18 +97,24 @@ class LastUpdate extends Component {
                 return response.json()
             })
             .then((data) => {
-                // Use of Date class from https://css-tricks.com/how-to-convert-a-date-string-into-a-human-readable-format/
-                const options = { year: "numeric", month: "long", day: "numeric" }
-                let date = new Date(data[0].lastupdate).toLocaleDateString(undefined, options)
-                this.setState({ isLoading: false, lastUpdate: date })
+                if (this._isMounted) {
+                    // Use of Date class from https://css-tricks.com/how-to-convert-a-date-string-into-a-human-readable-format/
+                    const options = { year: "numeric", month: "long", day: "numeric" }
+                    let date = new Date(data[0].lastupdate).toLocaleDateString("en-US", options)
+                    this.setState({ isLoading: false, lastUpdate: date })
+                }
             },
-            // Error handling design inspired by https://medium.com/@shivamkumar19/react-fetch-data-e19c37736950
-            error => {
-                this.setState({
-                    error,
-                    isLoading: false
-                })
-            });
+                // Error handling design inspired by https://medium.com/@shivamkumar19/react-fetch-data-e19c37736950
+                error => {
+                    this.setState({
+                        error,
+                        isLoading: false
+                    })
+                });
+    }
+
+    componentWillUnmount() {
+        this._isMounted = false;
     }
 
     render() {
@@ -113,7 +123,7 @@ class LastUpdate extends Component {
             return <div><h2>There was a problem with your request.</h2></div>;
         }
         if (isLoading) {
-            return <div className="text-center" style={{marginTop: 5}}><i id="spinner" className="fas fa-spin fa-circle-notch"></i></div>;
+            return <div className="text-center" style={{ marginTop: 5 }}><i id="spinner" className="fas fa-spin fa-circle-notch"></i></div>;
         }
         return <h2>Last update: {this.state.lastUpdate}</h2>
     }
@@ -121,7 +131,7 @@ class LastUpdate extends Component {
 
 // Parent class, and renders the toggle button for country cases
 // NOT a child component of WorldStats class
-class CasesByCountry extends Component {
+export class CasesByCountry extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -143,13 +153,13 @@ class CasesByCountry extends Component {
             .then((data) => {
                 this.setState({ isLoading: false, countries: data })
             },
-            // Error handling design inspired by https://medium.com/@shivamkumar19/react-fetch-data-e19c37736950
-            error => {
-                this.setState({
-                    error,
-                    isLoading: false
-                })
-            });
+                // Error handling design inspired by https://medium.com/@shivamkumar19/react-fetch-data-e19c37736950
+                error => {
+                    this.setState({
+                        error,
+                        isLoading: false
+                    })
+                });
     }
 
     handleClick = () => {
@@ -165,7 +175,7 @@ class CasesByCountry extends Component {
             return <div><h1>There was a problem with your request.</h1></div>;
         }
         if (isLoading) {
-            return <div className="text-center" style={{marginTop: 5}}><i id="spinner" className="fas fa-spin fa-circle-notch"></i></div>;
+            return <div className="text-center" style={{ marginTop: 5 }}><i id="spinner" className="fas fa-spin fa-circle-notch"></i></div>;
         }
 
         let countries = this.state.countries.map((country) => {
@@ -176,7 +186,7 @@ class CasesByCountry extends Component {
         return (
             <section>
                 <div id="countryButton">
-                    <button className="btn-primary caseButton" onClick={() => this.handleClick()}>Toggle Cases by Country</button>
+                    <button className="btn-primary caseButton" onClick={() => this.handleClick()} aria-pressed="false">Toggle Cases by Country</button>
                     <table id="countryTable" className="table table-bordered table-striped" style={{ display: this.state.visible === true ? 'table' : 'none' }}>
                         <caption>List of Coronavirus cases by country.</caption>
                         <TableHeader cols={['Country', 'Cases']} />
@@ -193,7 +203,7 @@ class CasesByCountry extends Component {
 // Child component to CasesByCountry class, renders the table head
 // for the table of countries and their cases.
 // Table design inspired by Problem Set 8
-class TableHeader extends Component {
+export class TableHeader extends Component {
     render() {
         let tableHeaders = this.props.cols.map((column) => {
             return <th key={column}>{column}</th>
@@ -211,7 +221,7 @@ class TableHeader extends Component {
 
 // Child component of CasesByCountry class, renders each individual row
 // for the table
-class TableRow extends Component {
+export class TableRow extends Component {
     render() {
         let country = this.props.country;
 

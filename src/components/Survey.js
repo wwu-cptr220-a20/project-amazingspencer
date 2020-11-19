@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Link, Switch, Route, useRouteMatch } from "rea
 
 export default function SurveyQuestion() {
     return (
-        <Router basename="project-amazingspencer/survey/">
+        <Router>
             <header>
                 <div className="container">
                     <h1>Coronavirus Personal Survey</h1>

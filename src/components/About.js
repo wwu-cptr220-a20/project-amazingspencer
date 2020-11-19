@@ -9,7 +9,7 @@ export default class About extends Component {
         return (
             <div className="container text-center">
                 <h1>Meet the Team!</h1>
-                <div className="card-deck mb-3 mx-auto">
+                <div id="cardDeck" className="card-deck mb-3 mx-auto">
                     <div className="card-column col-md-6">
                         <Card name="Spencer Nielsen" description="Spencer is currently studying Information Systems. He is also learning how to make websites!." imageSource={Spencer} email="mailto:Spencer.Nielsen@wallawalla.edu" />
                     </div>
