@@ -74,9 +74,10 @@ export default class Map extends Component {
             <div style={{ height: '100vh', width: '100%' }}>
                 <GoogleMapReact
                     bootstrapURLKeys={{ key: "AIzaSyBbPk_NONuQ7r1buVhCf_R4c32j_E660xc" }}
-                    defaultCenter={{ lat: 0, lng: 0 }}
-                    defaultZoom={3}
-                    mapTypeId='hybrid'
+                    defaultCenter={{lat: 0, lng: 0}}
+                    defaultZoom={0}
+                    defaultMaptype={{mapTypeId: "hybrid"}}
+                    defaultUI={{disableDefaultUI: true}}
                 >
                     {countries}
                 </GoogleMapReact>
