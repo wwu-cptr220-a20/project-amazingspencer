@@ -29,19 +29,19 @@ document.querySelector('#case-count').insertBefore(alert, worldCaseCount);
 // Web API to display Coronavirus statistics, same source as Samuel Hernadez's on map.
 // Use of NumberFormat from MDN Docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
 fetch('https://wuhan-coronavirus-api.laeyoung.endpoint.ainize.ai/jhu-edu/brief')
-    .then(function (response) {
+    .then(function(response) {
         if (!response.ok) {
             // Make the alert visible
             alert.classList.replace('d-none', 'd-block');
         }
         return response.json();
     })
-    .then(function (data) {
+    .then(function(data) {
         createHeader(new Intl.NumberFormat().format(data.confirmed), 'Confirmed: ');
         createHeader(new Intl.NumberFormat().format(data.deaths), 'Deaths: ');
         createHeader(new Intl.NumberFormat().format(data.recovered), 'Recovered: ');
     })
-    .catch(function (err) {
+    .catch(function(err) {
         // Make the alert visisble
         alert.classList.replace('d-none', 'd-block');
         console.error(err);
@@ -52,7 +52,7 @@ fetch('https://wuhan-coronavirus-api.laeyoung.endpoint.ainize.ai/jhu-edu/brief')
 // Function designs inspired by Samuel Hernadez's implementation in map.html
 async function fetchData() {
     const response = await fetch('https://wuhan-coronavirus-api.laeyoung.endpoint.ainize.ai/jhu-edu/latest')
-        .catch(function (err) {
+        .catch(function(err) {
             // Make the alert visisble
             alert.classList.replace('d-none', 'd-block');
             console.error(err);
@@ -77,7 +77,7 @@ async function displayData() {
 
     let list = document.createElement('ul');
     list.classList.add('countryList');
-    data.forEach(function (item) {
+    data.forEach(function(item) {
         list.appendChild(createListItem(item));
     });
     worldCaseCount.appendChild(list);
@@ -100,7 +100,7 @@ button.textContent = 'Show cases by Country';
 document.querySelector('#case-count').insertBefore(button, worldCaseCount);
 
 // Button event listener to toggle the cases by country
-button.addEventListener('click', function () {
+button.addEventListener('click', function() {
     if (state.countryCases.visible === true) {
         state.countryCases.visible = false;
         removeData();
@@ -114,4 +114,13 @@ button.addEventListener('click', function () {
 function removeData() {
     worldCaseCount.removeChild(document.querySelector('.countryList'));
     worldCaseCount.removeChild(document.querySelector('.countryHeader'));
+}
+
+// Gets text submission for posts
+function getwords() {
+    let text = document.getElementById("words").value;
+    var d = new Date();
+    document.getElementById("para").innerHTML += '<p>' + text + "<br>" + "<i>" + "<small>" + " " + d;
+    //document.getElementById("para").innerHTML.style.display = "inline-box";
+    document.getElementById("words").value = "";
 }
