@@ -30,7 +30,7 @@ describe("Content and HTML is valid.", () => {
             render(<Map />, container);
         });
 
-        // Write your test here, like expect( this should be ).toBe( this )
+        // Write test here, like expect( this should be ).toBe( this )
         global.fetch.mockRestore();
     })
 
