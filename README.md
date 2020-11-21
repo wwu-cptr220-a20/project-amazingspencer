@@ -2,7 +2,19 @@
 
 Welcome to CovidHub! Your personal hub for all things COVID-19!
 
-The coronavirus has upended our lives and sent the world into a lockdown mode. The aim of this website will be to provide informative and helpful information on the coronavirus including number of cases, deaths, a map graphic, and reliable articles. The website presented currently explores this and other possible web applications that could be made in light of the coronavirus.
+The coronavirus has upended our lives and sent the world into a lockdown mode. The aim of this website will be to provide informative and helpful information on the coronavirus including number of cases, deaths, a map graphic, and a personal survey. To use our app, simply explore the Home page and use the navigation bar at the top to be directed to the different features. Explore the About page to learn more about the team behind the app.
+
+This project was bootstrapped with [Creat React App](https://reactjs.org/)!
+
+## The CovidHub Team:
+* [Spencer Nielsen](https://github.com/amazingspencer)
+* [Samuel Hernadez](https://github.com/SamuelSHernandez)
+* [Hayden Tinker](https://github.com/tinktink1)
+* [Samuel Nguyen](https://github.com/samuelnguyen316)
+
+# Development Process:
+
+See Stage-7 notes at the bottom, for the latest updates on what has been added!
 
 ## Stage-2 Improvements
 
@@ -87,4 +99,15 @@ The site has been updated and rehauled even further. The Map page should now be 
 
 ### Survey Page Specifics:
 
-The Survey page was rebuilt from the ground up. This was in large part due to accessibility requirements and now fits in with the overall theme of the site. Nested routes are used to direct the user to specific resources that can help them based on how they are feeling.
+The Survey page was rebuilt from the ground up. This was in large part due to accessibility requirements and now fits in with the overall theme of the site. Nested routes are used to direct the user to specific resources that can help them based on how they are feeling. The Survey page uses one button that both starts and restarts the survey as needed!
+
+#### Specific Improvements:
+* Added a team name
+* Fixed parallax feature
+* Disabled parallax feature for mobile devices
+* Changed Timeline to nice table
+* Updated footer with special message from the team
+* Added handy loading spinners for Cases page
+* Turned ugly unordered list on Cases page into nice table
+* Added responsiveness to the About page
+* Addressed accessibility issues throughout the site
