@@ -79,7 +79,7 @@ export default class Map extends Component {
                 >
 
 
-                    <img src={marker} alt={data.country} />
+                    <img className="markerIcon" src={marker} alt={data.country} />
             
                     <br />
 
