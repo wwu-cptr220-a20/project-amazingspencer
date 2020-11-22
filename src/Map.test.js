@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { act } from 'react-dom/test-utils';
 import { render } from 'react-dom';
 
@@ -13,7 +13,6 @@ beforeEach(() => {
 
 afterEach(() => {
     // cleanup on exiting
-    // eslint-disable-next-line no-undef
     unmountComponentAtNode(container);
     container.remove();
     container = null;
