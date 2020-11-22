@@ -5,7 +5,15 @@ import marker from '../img/marker.png';
 
 
 
+const zoomControls = {
+    scaleControl: true,
+    mapTypeId: 'hybrid'
+}
+
+
 export default class Map extends Component {
+
+
     constructor(props) {
         super(props)
         this.state = {
@@ -44,13 +52,9 @@ export default class Map extends Component {
         this._isMounted = false;
     }
 
-
     render() {
 
-        const zoomControls = {
-            scaleControl: true,
-            mapTypeId: 'hybrid'
-        }
+
 
 
         let { error, isLoading } = this.state;
@@ -80,16 +84,14 @@ export default class Map extends Component {
 
 
                     <img className="markerIcon" src={marker} alt={data.country} />
-            
-                    <br />
+
+                    <br/>
 
                     <div className="pulse" />
                 </div>
             );
         })
 
-        //KNOWN BUG ON LINE 82: marker icon shows ugly square shadow around Icon. 
-        
         // data.countryInfo.flag
         // {data.cases}
         //
@@ -103,16 +105,18 @@ export default class Map extends Component {
                     defaultZoom={3}
                     defaultControls={zoomControls}
 
+
+
                 //hover Distance
                 //On Bounds Change
-                    //TODO: child mouse Enter
+                //TODO: child mouse Enter
                 //On Child Click
-                    //TODO: Expand to include Coutry name, flag, cases, recovered, deaths
+                //TODO: Expand to include Coutry name, flag, cases, recovered, deaths
                 //On Child Mouse Enter
-                    //TODO: add Country Name, flag, and cases
+                //TODO: add Country Name, flag, and cases
 
                 //On Child MouseLeave
-                    //TODO: close info window
+                //TODO: close info window
 
                 >
 
