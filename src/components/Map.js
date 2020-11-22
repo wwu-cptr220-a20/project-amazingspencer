@@ -47,9 +47,11 @@ export default class Map extends Component {
 
     render() {
 
-        const handleApiLoaded = (map, maps) => {
-            // use map and maps objects
-        };
+        const zoomControls = {
+            scaleControl: true,
+            mapTypeId: 'hybrid'
+        }
+
 
         let { error, isLoading } = this.state;
         if (error) {
@@ -78,15 +80,20 @@ export default class Map extends Component {
 
 
                     <img src={marker} alt={data.country} />
+            
                     <br />
 
-                    <div className="pulse"/>
+                    <div className="pulse" />
                 </div>
             );
         })
+
+        //KNOWN BUG ON LINE 82: marker icon shows ugly square shadow around Icon. 
+        
         // data.countryInfo.flag
         // {data.cases}
         //
+
 
         return (
             <div style={{ height: '100vh', width: '100%' }}>
@@ -94,14 +101,18 @@ export default class Map extends Component {
                     bootstrapURLKeys={{ key: "AIzaSyBbPk_NONuQ7r1buVhCf_R4c32j_E660xc" }}
                     defaultCenter={{ lat: 0, lng: 0 }}
                     defaultZoom={3}
-                    yesIWantToUseGoogleMapApiInternals={true}
-                    onGoogleApiLoaded={({ map, maps }) => handleApiLoaded(map, maps)}
-                    screenControl={{ fullscreenControl: false }}
-                    //hover Distance
-                    //On Bounds Change
-                    //On Child Click
-                    //On Child Mouse Enter
-                    //On Child MouseLeave
+                    defaultControls={zoomControls}
+
+                //hover Distance
+                //On Bounds Change
+                    //TODO: child mouse Enter
+                //On Child Click
+                    //TODO: Expand to include Coutry name, flag, cases, recovered, deaths
+                //On Child Mouse Enter
+                    //TODO: add Country Name, flag, and cases
+
+                //On Child MouseLeave
+                    //TODO: close info window
 
                 >
 

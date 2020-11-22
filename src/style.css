@@ -1,277 +1,282 @@
 /* General Styles */
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0px;
-    padding-top: 50px;
-    font-family: 'Roboto', sans-serif;
-
+  margin: 0px;
+  padding-top: 50px;
+  font-family: "Roboto", sans-serif;
 }
 
 .navbar {
-    background-color: #0d47a1;
-
+  background-color: #0d47a1;
 }
 
 .nav a {
-    text-align: center;
-    margin-right: 5rem;
-    font-size: 18px;
-    color: white;
+  text-align: center;
+  margin-right: 5rem;
+  font-size: 18px;
+  color: white;
 }
 
 .nav a:hover {
-    color: white;
-    text-shadow:0px 0px 3px #a3a3a3;
-    -moz-transition: all 0.1s ease-in;
-    -o-transition: all 0.1s ease-in;
-    -webkit-transition: all 0.1s ease-in;
-    transition: all 0.1s ease-in;
+  color: white;
+  text-shadow: 0px 0px 3px #a3a3a3;
+  -moz-transition: all 0.1s ease-in;
+  -o-transition: all 0.1s ease-in;
+  -webkit-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
 }
 
 .hamburger {
-    font-size: 30px;
-    color: #fff;
+  font-size: 30px;
+  color: #fff;
 }
 
 #skip a {
-    position: absolute;
-    left: -10000px;
-    top: auto;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 
-#skip a:focus, #skip a:active {
-    position: static;
-    width: auto;
-    height: auto;
-    overflow: visible;
-    color: white;
-    border: none;
+#skip a:focus,
+#skip a:active {
+  position: static;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  color: white;
+  border: none;
 }
 
 h1 {
-    font-weight: 900;
-    padding-top: 5rem;
+  font-weight: 900;
+  padding-top: 5rem;
 }
 
-cite a, .resource a {
-    color: black;
-    text-decoration: underline;
+cite a,
+.resource a {
+  color: black;
+  text-decoration: underline;
 }
-
 
 footer i {
-    color: red;
+  color: red;
 }
 
 /* Home page Styles */
 
 .parallax-section {
-    background-attachment: scroll;
+  background-attachment: scroll;
 }
 
 @media (min-width: 1000px) {
-    .parallax-section {
-        background-image: url('img/coronavirus.png');
-        min-height: 500px;
-        width: 100%;
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: relative;    
-    }
+  .parallax-section {
+    background-image: url("img/coronavirus.png");
+    min-height: 500px;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
 
-    .parallax-section h1, .parallax-section h2 {
-        color: white;
-    }    
+  .parallax-section h1,
+  .parallax-section h2 {
+    color: white;
+  }
 }
 
 img {
-    width: auto;
-    height: auto;
-    max-width: 100%;
-    max-height: 90%;
-    margin: 20px auto;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 90%;
+  margin: 20px auto;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
 }
 
 /* About page Styles */
 
 .card {
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 .card a:hover {
-    background-color: #0d47a1;
-} 
+  background-color: #0d47a1;
+}
 
 .card-deck {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 10em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 10em;
 }
 
 /* Map page Styles */
 
 .map {
-    width: 100vw;
-    height: 100vh;
+  width: 100vw;
+  height: 100vh;
 }
 
 /* Survey page Styles */
 
 .button {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 #resetSurvey {
-    color: white;
-    background-color: #0d47a1;
+  color: white;
+  background-color: #0d47a1;
 }
 
 /* Cases page Styles */
 
 .caseButton {
-    font-size: 31px;
-    margin-bottom: 1em;
-    color: white;
-    background-color: #0d47a1;
-    border: 0px solid white;
-    border-radius: 5px;
+  font-size: 31px;
+  margin-bottom: 1em;
+  color: white;
+  background-color: #0d47a1;
+  border: 0px solid white;
+  border-radius: 5px;
 }
 
-.caseButton:hover, .caseButton:focus {
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-  }
+.caseButton:hover,
+.caseButton:focus {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
 
 .topCaseButton {
-    font-size: 30px;
-    margin-bottom: 1em;
-    color: white;
-    background-color: #0d47a1;
-    border: 0px solid white;
-    border-radius: 5px;
+  font-size: 30px;
+  margin-bottom: 1em;
+  color: white;
+  background-color: #0d47a1;
+  border: 0px solid white;
+  border-radius: 5px;
 }
 
-.topCaseButton:hover, .topCaseButton:focus {
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-  }
+.topCaseButton:hover,
+.topCaseButton:focus {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
 
 #case-count h2 {
-    font-weight: 800;
-    margin-bottom: 10px;
+  font-weight: 800;
+  margin-bottom: 10px;
 }
 
 #spinner {
-    margin-top: 5rem;
-    color: #5472d3;
-    font-size: 60px;
+  margin-top: 5rem;
+  color: #5472d3;
+  font-size: 60px;
 }
 
 #countryButton {
-    margin-bottom: 5em;
+  margin-bottom: 5em;
 }
 
-#tableHead, #tableHead2 {
-    color: white;
-    background-color: #0d47a1
+#tableHead,
+#tableHead2 {
+  color: white;
+  background-color: #0d47a1;
 }
 
 /* Google Maps custom marker*/
 .marker {
-    border: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 50px;
-    height: 50px;
-    border-radius: 100%;
-    user-select: none;
-    transform: translate(-50%, -50%);
-    
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  user-select: none;
+  transform: translate(-50%, -50%);
 }
 
 .pin {
-    width: 30px;
-    height: 30px;
-    border-radius: 50% 50% 50% 0;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin: -20px 0 0 -20px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50% 50% 50% 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -20px 0 0 -20px;
 }
 
-
 .bounce {
-    animation-name: bounce;
-    animation-fill-mode: both;
-    animation-duration: 1s;
+  animation-name: bounce;
+  animation-fill-mode: both;
+  animation-duration: 1s;
 }
 
 .pulse {
-    border-radius: 50%;
-    height: 20px;
-    width: 20px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin: 12px 0px 0px -12px;
-    z-index: -2;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: 12px 0px 0px -12px;
+  z-index: -2;
 }
 
 .pulse:after {
-content: "";
-    border-radius: 50%;
-    height: 30px;
-    width: 30px;
-    position: absolute;
-    margin: -13px 0 0 -13px;
-    animation: pulsate 1s ease-out;
-    animation-iteration-count: infinite;
-    opacity: 0;
-    box-shadow: 0 0 2px 2px #00cae9;
-    animation-delay: 1s;
+  content: "";
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  margin: -13px 0 0 -13px;
+  animation: pulsate 1s ease-out;
+  animation-iteration-count: infinite;
+  opacity: 0;
+  box-shadow: 0 0 2px 2px #00cae9;
+  animation-delay: 1s;
 }
 
 @keyframes pulsate {
-    0% {
+  0% {
     transform: scale(0.1, 0.1);
     opacity: 0;
-    }
+  }
 
-    50% {
+  50% {
     opacity: 1;
-    }
+  }
 
-    100% {
+  100% {
     transform: scale(1.2, 1.2);
     opacity: 0;
-    }
+  }
 }
 
 @keyframes bounce {
-    0% {
+  0% {
     opacity: 0;
     transform: translateY(-2000px);
-    }
+  }
 
-    60% {
+  60% {
     opacity: 1;
     ransform: translateY(30px);
-    }
+  }
 
-    80% {
+  80% {
     transform: translateY(-10px);
-    }
-    
-    100% {
+  }
+
+  100% {
     transform: translateY(0);
-    }
+  }
+}
+
+.gm-fullscreen-control {
+  display: none;
 }
