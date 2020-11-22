@@ -190,6 +190,11 @@ img {
 }
 
 /* Google Maps custom marker*/
+.markerIcon{
+  width:auto;
+  height:auto;
+  box-shadow: none !important;
+}
 .marker {
   position: absolute;
   top: 50%;
