@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon -->
+    <link class="favicon" rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link class="favicon" rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link class="favicon" rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link class="favicon" rel="manifest" href="favicon/site.webmanifest">
+    <title>COVID-19 - Survey</title>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/08a93ca9f2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style/style.css">
+    <!-- Bootstrap JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <!-- Survey jQuery -->
+    <script src="https://surveyjs.azureedge.net/1.8.11/survey.jquery.min.js"></script>
+    <script src="./library-js/survey.js"></script>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar fixed-top navbar-expand-md">
+            <div id="skip">
+                <a href="#overview">Skip to Content</a>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"><i class="fas fa-bars hamburger"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto nav">
+                    <li class="nav-item active"><a class="nav-link" href="index.html"><i
+                                class="fa fa-fw fa-home">&nbsp;Home</i></a></li>
+                    <li class="nav-item"><a class="nav-link" href="cases.html"><i
+                                class="fas fa-syringe">&nbsp;Cases</i></a></li>
+                    <li class="nav-item"><a class="nav-link" href="map.html"><i
+                                class="fas fa-map-marked-alt">&nbsp;Map</i></a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#care"><i
+                                class="fas fa-hand-holding-medical">&nbsp;Care</i></a></li>
+                    <li class="nav-item"><a class="nav-link" href="survey.html"><i
+                                class="fas fa-poll">&nbsp;Survey</i></a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html"><i
+                                class="fas fa-ellipsis-h">&nbsp;About</i></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div id="surveyContainer"></div>
+        <p>Refresh the page to restart the survey.</p>
+    </main>
+    <footer>
+        Contact <a href="mailto:amazingspencer13@gmail.com">Spencer</a>.
+        Spencer Nielsen &copy; All rights reserved.
+    </footer>
+    <!-- Survey.js JavaScript -->
+    <script>
+        var myCss = {
+            navigationButton: "btn btn-primary"
+        };
+        Survey.StylesManager.applyTheme("bootstrap");
+
+        var survey = new Survey.Model(surveyJSON);
+        $("#surveyContainer").Survey({ model: survey, css: myCss });
+    </script>
+</body>
+
+</html>

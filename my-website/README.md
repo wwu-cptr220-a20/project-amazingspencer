@@ -1,20 +1,13 @@
-# CovidHub
+# Course Project
 
-Welcome to CovidHub! Your personal hub for all things COVID-19!
+This repository contains practice exercises for the _Web Application Development_ at WWU.
+It has been adapted from _Client-Side Web Development_ course at the UW iSchool.
 
-The coronavirus has upended our lives and sent the world into a lockdown mode. The aim of this website will be to provide informative and helpful information on the coronavirus including number of cases, deaths, a map graphic, and a personal survey. To use our app, simply explore the Home page and use the navigation bar at the top to be directed to the different features. Explore the About page to learn more about the team behind the app.
+The site can be viewed at <https://wwu-cptr220-a20.github.io/project-yourusername/>
 
-This project was bootstrapped with [Creat React App](https://reactjs.org/)!
+# Coronavirus Web Application
 
-## The CovidHub Team:
-* [Spencer Nielsen](https://github.com/amazingspencer)
-* [Samuel Hernadez](https://github.com/SamuelSHernandez)
-* [Hayden Tinker](https://github.com/tinktink1)
-* [Samuel Nguyen](https://github.com/samuelnguyen316)
-
-# Development Process:
-
-See Stage-7 notes at the bottom, for the latest updates on what has been added!
+The coronavirus has upended our lives and sent the world into a lockdown mode. The aim of this website will be to provide informative and helpful information on the coronavirus including number of cases, deaths, a map graphic, and reliable articles. The website presented currently explores this and other possible web applications that could be made in light of the coronavirus.
 
 ## Stage-2 Improvements
 
@@ -73,41 +66,3 @@ Our team's contributions are listed below:
 * Hayden Tinker   - Helped add tests for HTML and CSS content.
 * Samuel Nguyen   - Currently working on a user form and testing for this aspect.
 * Spencer Nielsen - Added case functionality to view case totals ("Case" page), added survey from Survey.js ("Survey" page), and added tests for HTML, CSS, and JS content.
-
-## Stage-6: Complete Site Overhaul with [React](https://reactjs.org/)!
-
-For Stage-6, our team's task was to rebuild our site with the React JavaScript library. Here are the improvements:
-
-### Improvements
-
-#### Client-Side Routing
-
-To enable our site to behave like a normal website, client-side routing was added.
-One issue that came up with this, however, was Github Pages. Luckily, these awesome [guys](https://github.com/rafgraph/spa-github-pages) provided a way for us to utilize client-side routing and Github Pages. The trick they used, was to force Github Pages to keep retrieving the same resource (index.html) everytime a new component was clicked on. This way when you click on a nav tab, Github attempts to access what is there, finds a 404.html file (part of the trick), then gets its url modified to be what the component is expecting. Thus, the component appears. I am very thankful for this workaround and ease of use.
-
-### Improved About page
-
-In previous stages, our About page was looking very lackluster and I (Spencer Nielsen) was the only one on it. However, this is all changed with much improved styling updates and the rest of the team has been added using their images from ASWWU's Mask!
-
-### Other Styling Changes
-
-In addition to revamping the About page, the Cases page gained a brand new table that renders when you click on the button! A table was also added to the Home page for the timeline.
-
-## Stage-7: Final Website - CovidHub
-
-The site has been updated and rehauled even further. The Map page should now be working as intended and other pages have also gotten some upgrades. The Survey page has been rebuilt from the ground-up and now uses all original code in conjuction with client-side routing and nested routes. In addition, many other styling changes have been made.
-
-### Survey Page Specifics:
-
-The Survey page was rebuilt from the ground up. This was in large part due to accessibility requirements and now fits in with the overall theme of the site. Nested routes are used to direct the user to specific resources that can help them based on how they are feeling. The Survey page uses one button that both starts and restarts the survey as needed!
-
-#### Specific Improvements:
-* Added a team name
-* Fixed parallax feature
-* Disabled parallax feature for mobile devices
-* Changed Timeline to nice table
-* Updated footer with special message from the team
-* Added handy loading spinners for Cases page
-* Turned ugly unordered list on Cases page into nice table
-* Added responsiveness to the About page
-* Addressed accessibility issues throughout the site
