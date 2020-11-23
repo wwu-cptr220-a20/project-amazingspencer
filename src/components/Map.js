@@ -53,9 +53,6 @@ export default class Map extends Component {
 
     render() {
 
-
-
-
         let { error, isLoading } = this.state;
         if (error) {
             return <div><h2>There was a problem with your request.</h2></div>;
@@ -92,10 +89,6 @@ export default class Map extends Component {
             );
         })
 
-        // data.countryInfo.flag
-        // {data.cases}
-        //
-
 
         return (
             <div style={{ height: '100vh', width: '100%' }}>
@@ -105,8 +98,6 @@ export default class Map extends Component {
                     defaultZoom={3}
                     defaultControls={zoomControls}
 
-
-
                 //hover Distance
                 //On Bounds Change
                 //TODO: child mouse Enter
@@ -114,12 +105,9 @@ export default class Map extends Component {
                 //TODO: Expand to include Coutry name, flag, cases, recovered, deaths
                 //On Child Mouse Enter
                 //TODO: add Country Name, flag, and cases
-
                 //On Child MouseLeave
                 //TODO: close info window
-
                 >
-
 
                     {countries}
                 </GoogleMapReact>
