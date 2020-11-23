@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
-import marker from '../img/marker.png';
 // Use of google-map-react from https://www.youtube.com/watch?v=OunoJaa-dnU&t=433s and https://www.npmjs.com/package/google-map-react
 
 
@@ -75,16 +74,17 @@ export default class Map extends Component {
                     lat={data.countryInfo.lat}
                     lng={data.countryInfo.long}
                     style={{
-                        color: "blue",
+                        color: "#0d47a1",
                         textAlign: "center",
+                        fontWeight: "bold",
                         fontFamily: "Roboto"
                     }}
 
                 >
 
 
-                    <img className="markerIcon" src={marker} alt={data.country} />
-
+                    <img className="markerIcon" src={data.countryInfo.flag} alt={data.country} />
+                    cases: {data.cases}
                     <br/>
 
                     <div className="pulse" />
