@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/project-amazingspencer/static/css/main.0b2290db.chunk.css",
-    "main.js": "/project-amazingspencer/static/js/main.0170522e.chunk.js",
-    "main.js.map": "/project-amazingspencer/static/js/main.0170522e.chunk.js.map",
+    "main.css": "/project-amazingspencer/static/css/main.13dc4b2a.chunk.css",
+    "main.js": "/project-amazingspencer/static/js/main.9e934c31.chunk.js",
+    "main.js.map": "/project-amazingspencer/static/js/main.9e934c31.chunk.js.map",
     "runtime-main.js": "/project-amazingspencer/static/js/runtime-main.b3eff5f1.js",
     "runtime-main.js.map": "/project-amazingspencer/static/js/runtime-main.b3eff5f1.js.map",
     "static/js/2.46632b5f.chunk.js": "/project-amazingspencer/static/js/2.46632b5f.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.8908d678.chunk.js": "/project-amazingspencer/static/js/3.8908d678.chunk.js",
     "static/js/3.8908d678.chunk.js.map": "/project-amazingspencer/static/js/3.8908d678.chunk.js.map",
     "index.html": "/project-amazingspencer/index.html",
-    "static/css/main.0b2290db.chunk.css.map": "/project-amazingspencer/static/css/main.0b2290db.chunk.css.map",
+    "static/css/main.13dc4b2a.chunk.css.map": "/project-amazingspencer/static/css/main.13dc4b2a.chunk.css.map",
     "static/js/2.46632b5f.chunk.js.LICENSE.txt": "/project-amazingspencer/static/js/2.46632b5f.chunk.js.LICENSE.txt",
     "static/media/HaydenTinker.9ea534e1.jpg": "/project-amazingspencer/static/media/HaydenTinker.9ea534e1.jpg",
     "static/media/SamuelHernadez.4b240426.jpg": "/project-amazingspencer/static/media/SamuelHernadez.4b240426.jpg",
@@ -24,7 +24,7 @@
   "entrypoints": [
     "static/js/runtime-main.b3eff5f1.js",
     "static/js/2.46632b5f.chunk.js",
-    "static/css/main.0b2290db.chunk.css",
-    "static/js/main.0170522e.chunk.js"
+    "static/css/main.13dc4b2a.chunk.css",
+    "static/js/main.9e934c31.chunk.js"
   ]
 }
